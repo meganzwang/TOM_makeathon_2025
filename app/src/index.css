@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +13,7 @@ html, body, #root {
 }
 
 body {
-  @apply bg-neutral-50 text-neutral-800;
+  @apply bg-zinc-50 text-zinc-800;
   font-synthesis-weight: none;
   text-rendering: optimizeLegibility;
 }
@@ -20,5 +21,5 @@ body {
 /* A subtle focus ring for all focusable elements */
 :focus-visible {
   outline: none;
-  @apply ring-2 ring-emerald-400 ring-offset-2 ring-offset-neutral-50;
+  @apply ring-2 ring-emerald-400 ring-offset-2 ring-offset-zinc-50;
 }
