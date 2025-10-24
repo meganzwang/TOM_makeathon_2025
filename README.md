@@ -1,23 +1,23 @@
-Design: picture focused, see photo in gc
+Design: picture focused, see photo in gc<br /><br />
 
-To do:
-__TESTING__
-Test Audio button
-Test menu button (max depth?)
+To do:<br />
+__TESTING__<br />
+Test Audio button<br />
+Test menu button (max depth?)<br />
 
-__NEW FEATURES__
-row of buttons at bottom
-back in top right
-setting top right(?)
-
-
-__CHANGES__
-Change main menu interface - page of 9 buttons
-Change popup to page
+__NEW FEATURES__<br />
+row of buttons at bottom<br />
+back in top right<br />
+setting top right(?)<br />
 
 
+__CHANGES__<br />
+Change main menu interface - page of 9 buttons<br />
+Change popup to page<br />
 
 
-__FUTURE__
-Data persistence
-2 variants - one w/o categories
+
+
+__FUTURE__<br />
+Data persistence<br />
+2 variants - one w/o categories<br />
