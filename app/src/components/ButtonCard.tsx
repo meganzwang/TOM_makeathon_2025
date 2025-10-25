@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { ButtonItem } from "../types";
 import { getAssetUrl } from "../store/db";
@@ -5,7 +6,7 @@ import { getAssetUrl } from "../store/db";
 type Props = {
   btn: ButtonItem;
   pageBg: string;
-  radius?: "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+  radius?: "sm" | "md" | "lg" | "xl" | "twoxl" | "fourxl" | "sixxl" | "full";
 };
 
 const radiusMap = {
@@ -13,26 +14,24 @@ const radiusMap = {
   md: "rounded-md",
   lg: "rounded-lg", 
   xl: "rounded-xl",
-  "2xl": "rounded-2xl",
+  twoxl: "rounded-2xl",
+  fourxl: "rounded-4xl",
+  sixxl: "rounded-6xl",
   full: "rounded-full"
 };
 
-export default function ButtonCard({ btn, pageBg, radius = "full" }: Props) {
+export default function ButtonCard({ btn, pageBg, radius = "fourxl" }: Props) {
   const nav = useNavigate();
   const rounding = radiusMap[radius];
 
   const handleClick = async () => {
-    if (btn.type === "link" && btn.linkPageId) {
-      nav(`/p/${btn.linkPageId}`);
-      return;
-    }
-    // Audio button
+    if (btn.type === "link" && btn.linkPageId) return nav(`/p/${btn.linkPageId}`);
     if (btn.type === "audio") {
       if (btn.audioAssetId) {
         const url = await getAssetUrl(btn.audioAssetId);
         if (url) {
           const audio = new Audio(url);
-          audio.play();
+          audio.play().catch(() => {});
           audio.addEventListener("ended", () => URL.revokeObjectURL(url));
           return;
         }
@@ -48,7 +47,7 @@ export default function ButtonCard({ btn, pageBg, radius = "full" }: Props) {
   return (
     <button
       onClick={handleClick}
-      className={`m-2 w-full h-full !rounded-2xl shadow-sm border border-white/20 bg-brand text-white flex flex-col items-center justify-start overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60`}
+      className={`m-2 w-full h-full ${rounding} shadow-sm border ring-1 ring-white/20 bg-brand text-white flex flex-col items-center justify-start overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60`}
       style={{ backgroundColor: "#9146FF" }}
     >
       <div className="w-full px-2 pt-2 text-center">
@@ -60,7 +59,7 @@ export default function ButtonCard({ btn, pageBg, radius = "full" }: Props) {
         </div>
       </div>
       <div className="flex-1 w-full px-4 pb-4 flex items-center justify-center">
-        <CardImage btn={btn} rounding="rounded-2xl" bg={pageBg} />
+        <CardImage btn={btn} rounding={rounding} bg={pageBg} />
       </div>
     </button>
   );
@@ -68,7 +67,6 @@ export default function ButtonCard({ btn, pageBg, radius = "full" }: Props) {
 
 function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: string }) {
   const [imgUrl, setImgUrl] = useState<string | null>(null);
-  const placeholderRound = rounding === "rounded-full" ? "rounded-2xl" : rounding;
 
 
   React.useEffect(() => {
@@ -92,6 +90,7 @@ function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: s
   }
 
   // Placeholder: initial
+  const placeholderRound = rounding === "rounded-full" ? "rounded-2xl" : rounding;
   const initial = btn.label?.charAt(0)?.toUpperCase() ?? "?";
   return (
     <div className={`h-24 w-24 ${placeholderRound} bg-white/20 border border-white/30 flex items-center justify-center`}>
@@ -99,5 +98,3 @@ function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: s
     </div>
   );
 }
-
-import React, { useState } from "react";

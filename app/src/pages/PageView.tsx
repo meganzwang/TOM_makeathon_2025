@@ -44,11 +44,7 @@ function Grid({ page }: { page: any }) {
 
   return (
     <div
-<<<<<<< HEAD
-      className="grid gap-6 p-6 h-full"
-=======
-      className="grid gap-3 h-full place-content-start mt-200"
->>>>>>> a7e3a5eaa8d98d65090b914ed6ebb154844ea4bf
+      className="grid gap-6 p-6 h-full place-content-start mt-200"
       style={{
         gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
         gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
@@ -57,10 +53,10 @@ function Grid({ page }: { page: any }) {
       {page.buttons.map((b: any) => (
         <div
           key={b.id}
-          className="w-full h-full"
+          className="m-2 p-6 w-full h-full"
           style={{ gridColumn: `span ${b.colSpan ?? 1}` }}
         >
-          <ButtonCard btn={b} pageBg={page.bgColor} radius="xl" />
+          <ButtonCard btn={b} pageBg={page.bgColor} radius="full" />
         </div>
       ))}
     </div>
