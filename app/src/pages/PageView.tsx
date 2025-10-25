@@ -19,17 +19,14 @@ export default function PageView() {
   return (
     <div className="min-h-screen w-full" style={{ backgroundColor: bgColor }}>
       <TopBar title={page.title} onOpenSettings={() => setSettingsOpen(true)} />
-        <div
-          style={{
-            height: "calc(12px + env(safe-area-inset-top))",
-          }}  
-        />
       <div
-        className="mx-auto max-w-6xl px-4 pb-20">
-          <h1 className="text-4xl font-bold text-white mb-8 text-center">
-            {page.title}
-          </h1>
-          <Grid page={page} />
+        className="mx-auto max-w-6xl px-4 pb-20"
+        style={{
+          height: "calc(100vh - 64px - 64px - 80px)",
+          // topbar ~ 48px + padding, bottom bar ~ 64px
+        }}
+      >
+        <Grid page={page} />
       </div>
       <BottomBar />
       {settingsOpen && (
@@ -47,27 +44,17 @@ function Grid({ page }: { page: any }) {
 
   return (
     <div
-      className="
-      grid gap-4 
-      sm: auto-rows-[180px]
-      md: auto-rows-[220px]
-      lg: auto-rows-[260px]"
-      //h-full place-content-start mt-200"
-      
+      className="grid gap-3 h-full place-content-start mt-200"
       style={{
-        gridTemplateColumns: `repeat(${cols}, 1fr)`,
-        //gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
+        gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+        gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
       }}
     >
       {page.buttons.map((b: any) => (
         <div
           key={b.id}
-          className="w-full"
-          style={{ 
-            gridColumn: `span ${b.colSpan ?? 1}`,
-            height:"240px",
-            width: "200px",
-          }}
+          className="w-full h-full"
+          style={{ gridColumn: `span ${b.colSpan ?? 1}` }}
         >
           <ButtonCard btn={b} pageBg={page.bgColor} radius="xl" />
         </div>
