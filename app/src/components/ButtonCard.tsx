@@ -1,49 +1,90 @@
+import { useNavigate } from "react-router-dom";
 import type { ButtonItem } from "../types";
+import { getAssetUrl } from "../store/db";
 
-interface ButtonCardProps {
-  item: ButtonItem;
-  onClick: (item: ButtonItem) => void;
-}
+type Props = {
+  btn: ButtonItem;
+  pageBg: string;
+};
 
-export default function ButtonCard({ item, onClick }: ButtonCardProps) {
-  const isAudio = item.type === "audio";
-  const isMenu = item.type === "menu";
+export default function ButtonCard({ btn, pageBg }: Props) {
+  const nav = useNavigate();
+
+  const handleClick = async () => {
+    if (btn.type === "link" && btn.linkPageId) {
+      nav(`/p/${btn.linkPageId}`);
+      return;
+    }
+    // Audio button
+    if (btn.type === "audio") {
+      if (btn.audioAssetId) {
+        const url = await getAssetUrl(btn.audioAssetId);
+        if (url) {
+          const audio = new Audio(url);
+          audio.play();
+          audio.addEventListener("ended", () => URL.revokeObjectURL(url));
+          return;
+        }
+      }
+      // Fallback: speak label
+      if ("speechSynthesis" in window) {
+        const utter = new SpeechSynthesisUtterance(btn.label);
+        speechSynthesis.speak(utter);
+      }
+    }
+  };
 
   return (
     <button
-      onClick={() => onClick(item)}
-      className="group relative flex flex-col items-center gap-3 rounded-2xl border border-zinc-200 bg-white p-4 shadow-soft transition hover:shadow-md focus-visible:shadow-md"
-      aria-label={`${item.title} (${item.type})`}
+      onClick={handleClick}
+      className="w-full h-full rounded-2xl shadow-sm border border-white/20 bg-brand text-white flex flex-col items-center justify-start overflow-hidden"
+      style={{ backgroundColor: "#9146FF" }}
     >
-      <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-xl bg-zinc-100">
-        {item.imageUrl ? (
-          <img
-            src={item.imageUrl}
-            alt=""
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <span className="text-3xl">{isAudio ? "🔊" : "🗂️"}</span>
-        )}
-      </div>
-
-      <div className="text-center">
-        <div className="text-sm font-medium">{item.title}</div>
-        <div className="mt-0.5 text-xs text-zinc-500">
-          {isAudio ? "Audio" : "Menu"}
+      <div className="w-full px-2 pt-2 text-center">
+        <div className="flex items-center justify-center gap-2">
+          <span className="font-poppins font-bold text-white text-lg">{btn.label}</span>
+          {btn.type === "link" && (
+            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-brand font-bold">+</span>
+          )}
         </div>
       </div>
-
-      {isAudio && (
-        <div className="absolute right-2 top-2 rounded-full bg-emerald-50 px-2 py-1 text-xs text-emerald-600">
-          Play
-        </div>
-      )}
-      {isMenu && (
-        <div className="absolute right-2 top-2 rounded-full bg-sky-50 px-2 py-1 text-xs text-sky-600">
-          Open
-        </div>
-      )}
+      <div className="flex-1 w-full px-4 pb-4 flex items-center justify-center">
+        <CardImage btn={btn} bg={pageBg} />
+      </div>
     </button>
   );
 }
+
+function CardImage({ btn }: { btn: ButtonItem; bg: string }) {
+  const [imgUrl, setImgUrl] = useState<string | null>(null);
+
+  React.useEffect(() => {
+    let revoked: string | null = null;
+    (async () => {
+      if (btn.imageAssetId) {
+        const url = await getAssetUrl(btn.imageAssetId);
+        if (url) {
+          setImgUrl(url);
+          revoked = url;
+        }
+      }
+    })();
+    return () => {
+      if (revoked) URL.revokeObjectURL(revoked);
+    };
+  }, [btn.imageAssetId]);
+
+  if (imgUrl) {
+    return <img src={imgUrl} alt={btn.label} className="max-h-full max-w-full object-contain" />;
+  }
+
+  // Placeholder: initial
+  const initial = btn.label?.charAt(0)?.toUpperCase() ?? "?";
+  return (
+    <div className="h-24 w-24 rounded-full bg-white/20 border border-white/30 flex items-center justify-center">
+      <span className="font-poppins font-bold text-2xl text-white">{initial}</span>
+    </div>
+  );
+}
+
+import React, { useState } from "react";
