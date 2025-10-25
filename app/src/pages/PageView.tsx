@@ -53,6 +53,7 @@ function Grid({ page }: { page: any }) {
       md: auto-rows-[220px]
       lg: auto-rows-[260px]"
       //h-full place-content-start mt-200"
+      
       style={{
         gridTemplateColumns: `repeat(${cols}, 1fr)`,
         //gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
@@ -68,7 +69,7 @@ function Grid({ page }: { page: any }) {
             width: "200px",
           }}
         >
-          <ButtonCard btn={b} pageBg={page.bgColor} />
+          <ButtonCard btn={b} pageBg={page.bgColor} radius="xl" />
         </div>
       ))}
     </div>
