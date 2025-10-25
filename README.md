@@ -7,14 +7,15 @@ Test menu button (max depth?)<br />
 
 __NEW FEATURES__<br />
 (in progress)row of buttons at bottom<br />
-back in top right<br />
-setting top right(?)<br />
+back in top left<br />
+setting top right<br />
+        allows to edit buttons<br\>
 
 
 __CHANGES__<br />
 (in progress)Change main menu interface - page of 9 buttons<br />
 Change popup to page<br />
-
+Add remove option to buttons
 
 
 
