@@ -14,24 +14,39 @@ export default function PageView() {
 
   if (!page) return <div className="p-4">Page not found</div>;
 
-  const bgColor = page.parentId ? (getPageById(page.parentId)?.bgColor ?? page.bgColor) : page.bgColor;
+  const bgColor = page.parentId 
+  ? (getPageById(page.parentId)?.bgColor ?? page.bgColor) 
+  : page.bgColor;
 
   return (
-    <div className="min-h-screen w-full" style={{ backgroundColor: bgColor }}>
+    <div
+      className="relative flex flex-col h-[100dvh] w-full overflow-hidden"
+      style={{ backgroundColor: bgColor }}
+    >
+      {/* Fixed Top Bar */}
       <TopBar title={page.title} onOpenSettings={() => setSettingsOpen(true)} />
-        <div
-          style={{
-            height: "calc(12px + env(safe-area-inset-top))",
-          }}  
-        />
-      <div
-        className="mx-auto max-w-6xl px-4 pb-20">
-          <h1 className="text-4xl font-bold text-white mb-8 text-center">
-            {page.title}
-          </h1>
+      <div style={{ height: "calc(12px + env(safe-area-inset-top))" }} />
+
+      {/* Content area fills remaining space */}
+      <div className="flex-1 flex flex-col items-center justify-start overflow-hidden">
+        {/* Title Section */}
+        <h1 className="text-3xl font-bold text-white mb-6 text-center shrink-0">
+          {page.title}
+        </h1>
+
+        {/* Grid fills all remaining space under title */}
+        <div className="
+        flex-1 flex items-center justify-center w-full 
+        px-6 sm:px-6 md:px-10 lg:px-16 overflow-hidden"
+        >
           <Grid page={page} />
+        </div>
       </div>
+
+      {/* Fixed Bottom Bar */}
       <BottomBar />
+
+      {/* Settings modal */}
       {settingsOpen && (
         <React.Suspense fallback={null}>
           <SettingsLazy page={page} onClose={() => setSettingsOpen(false)} />
@@ -43,30 +58,35 @@ export default function PageView() {
 
 function Grid({ page }: { page: any }) {
   const cols = page.grid.cols;
-  const rows = page.grid.rows;
+  //const rows = page.grid.rows;
 
   return (
     <div
-      className="
-      grid gap-4 
-      sm: auto-rows-[180px]
-      md: auto-rows-[220px]
-      lg: auto-rows-[260px]"
-      //h-full place-content-start mt-200"
+      className="grid
+        gap-y-10 gap-x-10              /* gaps between buttons */
+        sm:gap-y-8 sm:gap-x-8
+        md:gap-y-10 md:gap-x-10
+        lg:gap-y-12 lg:gap-x-12
+        justify-center               /* horizontally center full grid */
+        transition-all"
       
       style={{
         gridTemplateColumns: `repeat(${cols}, 1fr)`,
+        //gridAutoRows: "1fr", // ensures rows auto-size evenly
         //gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
       }}
     >
       {page.buttons.map((b: any) => (
         <div
           key={b.id}
-          className="w-full"
+          className="flex items-center justify-center"
           style={{ 
             gridColumn: `span ${b.colSpan ?? 1}`,
-            height:"240px",
-            width: "200px",
+           // aspectRatio: "1 / 1", // keeps buttons square
+            //maxWidth: "240px",
+            //maxHeight: "240px",
+            width: "clamp(180px, 18vw, 260px)",
+            height: "clamp(180px, 18vw, 260px)",
           }}
         >
           <ButtonCard btn={b} pageBg={page.bgColor} radius="xl" />
