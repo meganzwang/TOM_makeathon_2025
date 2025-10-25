@@ -9,6 +9,11 @@ export interface ButtonItem {
   children?: ButtonItem[];
 }
 
+export interface LayoutConfig {
+  gridColsBase: 1 | 2 | 3 | 4 | 5 | 6;
+  gridColsSm: 1 | 2 | 3 | 4 | 5 | 6;
+}
+
 export const makeId = () =>
   typeof crypto !== "undefined" && "randomUUID" in crypto
     ? crypto.randomUUID()

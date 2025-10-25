@@ -12,16 +12,12 @@ export default function ButtonCard({ item, onClick }: ButtonCardProps) {
   return (
     <button
       onClick={() => onClick(item)}
-      className="group relative flex flex-col items-center gap-3 rounded-2xl border border-zinc-200 bg-white p-4 shadow-soft transition hover:shadow-md focus-visible:shadow-md"
+      className="group relative flex flex-col items-center gap-3 rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)] transition hover:shadow-md focus-visible:shadow-md"
       aria-label={`${item.title} (${item.type})`}
     >
       <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-xl bg-zinc-100">
         {item.imageUrl ? (
-          <img
-            src={item.imageUrl}
-            alt=""
-            className="h-full w-full object-cover"
-          />
+          <img src={item.imageUrl} alt="" className="h-full w-full object-cover" />
         ) : (
           <span className="text-3xl">{isAudio ? "🔊" : "🗂️"}</span>
         )}
@@ -30,7 +26,7 @@ export default function ButtonCard({ item, onClick }: ButtonCardProps) {
       <div className="text-center">
         <div className="text-sm font-medium">{item.title}</div>
         <div className="mt-0.5 text-xs text-zinc-500">
-          {isAudio ? "Audio" : "Menu"}
+          {isAudio ? "Audio" : "Folder"}
         </div>
       </div>
 

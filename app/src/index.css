@@ -1,9 +1,5 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* Minimal friendly base styling */
 :root {
   color-scheme: light;
 }
@@ -18,7 +14,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* A subtle focus ring for all focusable elements */
+/* Subtle focus ring */
 :focus-visible {
   outline: none;
   @apply ring-2 ring-emerald-400 ring-offset-2 ring-offset-zinc-50;
