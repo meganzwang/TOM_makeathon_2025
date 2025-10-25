@@ -1,4 +1,4 @@
-import Dexie, { Table } from "dexie";
+import Dexie, { type Table } from "dexie";
 import type { AssetRecord } from "../types";
 
 export class AACDB extends Dexie {
