@@ -25,6 +25,7 @@ export default function PageView() {
     >
       {/* Fixed Top Bar */}
       <TopBar title={page.title} onOpenSettings={() => setSettingsOpen(true)} />
+<<<<<<< HEAD
       <div style={{ height: "calc(12px + env(safe-area-inset-top))" }} />
 
       {/* Content area fills remaining space */}
@@ -41,6 +42,16 @@ export default function PageView() {
         >
           <Grid page={page} />
         </div>
+=======
+      <div
+        className="mx-auto max-w-6xl px-4 pb-20"
+        style={{
+          height: "calc(100vh - 64px - 64px - 80px)",
+          // topbar ~ 48px + padding, bottom bar ~ 64px
+        }}
+      >
+        <Grid page={page} />
+>>>>>>> 5e85e7d3b51c7ee4b059cfec2b0586bd6d46354f
       </div>
 
       {/* Fixed Bottom Bar */}
@@ -62,6 +73,7 @@ function Grid({ page }: { page: any }) {
 
   return (
     <div
+<<<<<<< HEAD
       className="grid
         gap-y-10 gap-x-10              /* gaps between buttons */
         sm:gap-y-8 sm:gap-x-8
@@ -74,11 +86,18 @@ function Grid({ page }: { page: any }) {
         gridTemplateColumns: `repeat(${cols}, 1fr)`,
         //gridAutoRows: "1fr", // ensures rows auto-size evenly
         //gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
+=======
+      className="grid gap-6 p-6 h-full place-content-start mt-200"
+      style={{
+        gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+        gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
+>>>>>>> 5e85e7d3b51c7ee4b059cfec2b0586bd6d46354f
       }}
     >
       {page.buttons.map((b: any) => (
         <div
           key={b.id}
+<<<<<<< HEAD
           className="flex items-center justify-center"
           style={{ 
             gridColumn: `span ${b.colSpan ?? 1}`,
@@ -88,8 +107,12 @@ function Grid({ page }: { page: any }) {
             width: "clamp(180px, 18vw, 260px)",
             height: "clamp(180px, 18vw, 260px)",
           }}
+=======
+          className="m-2 p-6 w-full h-full"
+          style={{ gridColumn: `span ${b.colSpan ?? 1}` }}
+>>>>>>> 5e85e7d3b51c7ee4b059cfec2b0586bd6d46354f
         >
-          <ButtonCard btn={b} pageBg={page.bgColor} radius="xl" />
+          <ButtonCard btn={b} pageBg={page.bgColor} radius="full" />
         </div>
       ))}
     </div>
