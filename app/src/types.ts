@@ -1,15 +1,29 @@
-export type ButtonType = "audio" | "menu";
+export type ButtonType = "audio" | "link";
 
-export interface ButtonItem {
+export type ButtonItem = {
   id: string;
   type: ButtonType;
-  title: string;
-  imageUrl?: string;
-  audioUrl?: string;
-  children?: ButtonItem[];
-}
+  label: string;
+  imageAssetId?: number;
+  audioAssetId?: number;
+  linkPageId?: string; // for link type
+  colSpan?: number;     // for extended buttons spanning columns
+};
 
-export const makeId = () =>
-  typeof crypto !== "undefined" && "randomUUID" in crypto
-    ? crypto.randomUUID()
-    : Math.random().toString(36).slice(2);
+export type PageDef = {
+  id: string;
+  slug: string;         // route path, e.g., "/", "/p/hungry"
+  title: string;
+  bgColor: string;      // e.g., "#C3B1E1"
+  grid: { cols: number; rows: number };
+  buttons: ButtonItem[];
+  parentId?: string;    // subpages inherit parent's bgColor if set
+};
+
+export type AssetRecord = {
+  id?: number;
+  type: "audio" | "image";
+  name: string;
+  blob: Blob;
+  createdAt: number;
+};

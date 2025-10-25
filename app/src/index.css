@@ -1,25 +1,18 @@
-@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Minimal friendly base styling */
+/* Safe area for mobile */
 :root {
-  color-scheme: light;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
 }
 
 html, body, #root {
   height: 100%;
 }
 
-body {
-  @apply bg-zinc-50 text-zinc-800;
-  font-synthesis-weight: none;
-  text-rendering: optimizeLegibility;
-}
-
-/* A subtle focus ring for all focusable elements */
-:focus-visible {
-  outline: none;
-  @apply ring-2 ring-emerald-400 ring-offset-2 ring-offset-zinc-50;
+/* Global style tweaks */
+button {
+  -webkit-tap-highlight-color: transparent;
 }
