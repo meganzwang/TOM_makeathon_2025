@@ -20,9 +20,9 @@ export default function PageView() {
     <div className="min-h-screen w-full" style={{ backgroundColor: bgColor }}>
       <TopBar title={page.title} onOpenSettings={() => setSettingsOpen(true)} />
       <div
-        className="mx-auto max-w-6xl px-4 pt-16 pb-20"
+        className="mx-auto max-w-6xl px-4 pb-20"
         style={{
-          height: "calc(100vh - 16px - 64px - 64px)",
+          height: "calc(100vh - 64px - 64px - 80px)",
           // topbar ~ 48px + padding, bottom bar ~ 64px
         }}
       >
@@ -44,7 +44,11 @@ function Grid({ page }: { page: any }) {
 
   return (
     <div
+<<<<<<< HEAD
       className="grid gap-6 p-6 h-full"
+=======
+      className="grid gap-3 h-full place-content-start mt-200"
+>>>>>>> a7e3a5eaa8d98d65090b914ed6ebb154844ea4bf
       style={{
         gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
         gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
