@@ -5,10 +5,21 @@ import { getAssetUrl } from "../store/db";
 type Props = {
   btn: ButtonItem;
   pageBg: string;
+  radius?: "sm" | "md" | "lg" | "xl" | "2xl" | "full";
 };
 
-export default function ButtonCard({ btn, pageBg }: Props) {
+const radiusMap = {
+  sm: "rounded-sm",
+  md: "rounded-md",
+  lg: "rounded-lg", 
+  xl: "rounded-xl",
+  "2xl": "rounded-2xl",
+  full: "rounded-full"
+};
+
+export default function ButtonCard({ btn, pageBg, radius = "full" }: Props) {
   const nav = useNavigate();
+  const rounding = radiusMap[radius];
 
   const handleClick = async () => {
     if (btn.type === "link" && btn.linkPageId) {
@@ -37,7 +48,7 @@ export default function ButtonCard({ btn, pageBg }: Props) {
   return (
     <button
       onClick={handleClick}
-      className="w-full h-full rounded-2xl shadow-sm border border-white/20 bg-brand text-white flex flex-col items-center justify-start overflow-hidden"
+      className={`m-2 w-full h-full !rounded-2xl shadow-sm border border-white/20 bg-brand text-white flex flex-col items-center justify-start overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60`}
       style={{ backgroundColor: "#9146FF" }}
     >
       <div className="w-full px-2 pt-2 text-center">
@@ -49,14 +60,16 @@ export default function ButtonCard({ btn, pageBg }: Props) {
         </div>
       </div>
       <div className="flex-1 w-full px-4 pb-4 flex items-center justify-center">
-        <CardImage btn={btn} bg={pageBg} />
+        <CardImage btn={btn} rounding="rounded-2xl" bg={pageBg} />
       </div>
     </button>
   );
 }
 
-function CardImage({ btn }: { btn: ButtonItem; bg: string }) {
+function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: string }) {
   const [imgUrl, setImgUrl] = useState<string | null>(null);
+  const placeholderRound = rounding === "rounded-full" ? "rounded-2xl" : rounding;
+
 
   React.useEffect(() => {
     let revoked: string | null = null;
@@ -81,7 +94,7 @@ function CardImage({ btn }: { btn: ButtonItem; bg: string }) {
   // Placeholder: initial
   const initial = btn.label?.charAt(0)?.toUpperCase() ?? "?";
   return (
-    <div className="h-24 w-24 rounded-full bg-white/20 border border-white/30 flex items-center justify-center">
+    <div className={`h-24 w-24 ${placeholderRound} bg-white/20 border border-white/30 flex items-center justify-center`}>
       <span className="font-poppins font-bold text-2xl text-white">{initial}</span>
     </div>
   );

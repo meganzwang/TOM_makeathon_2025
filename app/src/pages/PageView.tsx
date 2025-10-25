@@ -44,7 +44,7 @@ function Grid({ page }: { page: any }) {
 
   return (
     <div
-      className="grid gap-3 h-full"
+      className="grid gap-6 p-6 h-full"
       style={{
         gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
         gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
@@ -56,7 +56,7 @@ function Grid({ page }: { page: any }) {
           className="w-full h-full"
           style={{ gridColumn: `span ${b.colSpan ?? 1}` }}
         >
-          <ButtonCard btn={b} pageBg={page.bgColor} />
+          <ButtonCard btn={b} pageBg={page.bgColor} radius="xl" />
         </div>
       ))}
     </div>
