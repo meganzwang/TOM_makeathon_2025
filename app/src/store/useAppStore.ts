@@ -131,7 +131,7 @@ const defaultPages: PageDef[] = [
     bgColor: COLOR_ACTIVITIES,
     grid: { cols: 4, rows: 2 },
     buttons: [
-      { id: "tv_nursery", type: "audio", label: "Nursery" },
+      { id: "tv_nursery", type: "audio", label: "Nursery Rhymes" },
       { id: "tv_lorax", type: "audio", label: "Lorax" },
       { id: "tv_clifford", type: "audio", label: "Clifford" },
       { id: "tv_netflix", type: "audio", label: "Netflix" },
