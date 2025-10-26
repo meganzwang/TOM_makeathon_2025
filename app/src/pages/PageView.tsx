@@ -19,7 +19,11 @@ export default function PageView() {
   : page.bgColor;
 
   return (
-    <div className="min-h-screen w-full" style={{ backgroundColor: bgColor }}>
+    <div 
+      key={location.pathname}
+      className="min-h-screen w-full animate-fadeSlideIn" 
+      style={{ backgroundColor: bgColor }}
+    >
       <TopBar title={page.title} onOpenSettings={() => setSettingsOpen(true)} />
       <div
         className="mx-auto max-w-6xl px-4 pb-20"
@@ -56,11 +60,14 @@ function Grid({ page }: { page: any }) {
         gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
       }}
     >
-      {page.buttons.map((b: any) => (
+      {page.buttons.map((b: any, index: number) => (
         <div
           key={b.id}
-          className="m-2 p-6 w-full h-full"
-          style={{ gridColumn: `span ${b.colSpan ?? 1}` }}
+          className="m-2 p-6 w-full h-full animate-fadeIn"
+          style={{ 
+            gridColumn: `span ${b.colSpan ?? 1}`,
+            animationDelay: `${index * 0.05}s`
+          }}
         >
           <ButtonCard btn={b} pageBg={page.bgColor} />
         </div>
