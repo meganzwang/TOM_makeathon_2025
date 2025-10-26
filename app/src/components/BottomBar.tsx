@@ -56,7 +56,7 @@ function LowButton({ label, onClick, color }: { label: string; onClick: () => vo
     focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50
     "
       style={{
-        border: "3px solid #9146FF",
+        // border: "3px solid #9146FF",
         borderRadius: "1rem",
         minWidth: "150px",
         minHeight: "60px",
