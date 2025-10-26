@@ -46,7 +46,7 @@ export default function PageView() {
 
 function Grid({ page }: { page: any }) {
   const cols = page.grid.cols;
-  //const rows = page.grid.rows;
+  const rows = page.grid.rows;
 
   return (
     <div
