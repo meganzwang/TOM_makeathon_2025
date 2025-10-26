@@ -17,13 +17,13 @@ const defaultPages: PageDef[] = [
     buttons: [
       { id: "b_home_hungry", type: "link", label: "Hungry", linkPageId: "hungry" },
       { id: "b_home_activities", type: "link", label: "Activities", linkPageId: "activities" },
-      { id: "b_home_chat", type: "audio", label: "Chat" },
-      { id: "b_home_needs", type: "audio", label: "Needs" },
-      { id: "b_home_feelings", type: "audio", label: "Feelings" },
-      { id: "b_home_people", type: "audio", label: "People" },
+      { id: "b_home_places", type: "link", label: "Places", linkPageId: "places" },
+      { id: "b_home_chat", type: "link", label: "Chat", linkPageId: "chat" },
+      { id: "b_home_needs", type: "link", label: "Needs", linkPageId: "i_need" },
+      { id: "b_home_feelings", type: "link", label: "Feelings", linkPageId: "feelings" },
+      { id: "b_home_i_did", type: "link", label: "I Did", linkPageId: "i_did" },
+      { id: "b_home_people", type: "link", label: "People" , linkPageId:"people"},
       { id: "b_home_questions", type: "audio", label: "Questions" },
-      { id: "b_home_restaurants", type: "link", label: "Restaurants", linkPageId: "restaurants" },
-      { id: "b_home_yoga", type: "audio", label: "Yoga" }
     ]
   },
   {
@@ -31,12 +31,13 @@ const defaultPages: PageDef[] = [
     slug: "/p/hungry",
     title: "Hungry",
     bgColor: COLOR_HUNGRY,
-    grid: { cols: 3, rows: 2 },
+    grid: { cols: 2, rows: 3 },
     buttons: [
-      { id: "b_h_rest", type: "link", label: "Restaurant", linkPageId: "restaurants", colSpan: 3 },
+      { id: "b_h_rest", type: "link", label: "Restaurant", linkPageId: "restaurants", colSpan: 2 },
       { id: "b_h_meal", type: "link", label: "Meal", linkPageId: "meal" },
       { id: "b_h_snack", type: "link", label: "Snack", linkPageId: "snack" },
-      { id: "b_h_drink", type: "link", label: "Drink", linkPageId: "drink" }
+      { id: "b_h_drink", type: "link", label: "Drink", linkPageId: "drink" },
+      { id: "b_h_dessert", type: "link", label: "Dessert", linkPageId: "dessert" }
     ]
   },
   {
@@ -97,7 +98,7 @@ const defaultPages: PageDef[] = [
     slug: "/p/activities",
     title: "Activities",
     bgColor: COLOR_ACTIVITIES,
-    grid: { cols: 2, rows: 4 },
+    grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "a_art", type: "link", label: "Art", linkPageId: "art" },
       { id: "a_yoga", type: "audio", label: "Yoga" },
@@ -128,7 +129,7 @@ const defaultPages: PageDef[] = [
     slug: "/p/tv",
     title: "TV",
     bgColor: COLOR_ACTIVITIES,
-    grid: { cols: 2, rows: 4 },
+    grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "tv_nursery", type: "audio", label: "Nursery" },
       { id: "tv_lorax", type: "audio", label: "Lorax" },
@@ -138,6 +139,179 @@ const defaultPages: PageDef[] = [
       { id: "tv_cat_hat", type: "audio", label: "Cat & Hat" },
       { id: "tv_pbs", type: "audio", label: "PBS" },
       { id: "tv_cook", type: "audio", label: "Cooking Show" }
+    ]
+  },{
+    id: "places",
+    parentId: "home",
+    slug: "/p/places",
+    title: "Places",
+    bgColor: COLOR_HOME, //todo change color
+    grid: { cols: 3, rows: 3 },
+    buttons: [
+      { id: "places_resturants", type: "link", label: "Restaurants", linkPageId: "restaurants" },
+      { id: "places_bathroom", type: "audio", label: "Bathroom" },
+      { id: "places_bowling", type: "audio", label: "Bowling" },
+      { id: "places_shopping", type: "link", label: "Shopping", linkPageId: "shopping" },
+      { id: "places_home", type: "audio", label: "Home" },
+      { id: "places_park", type: "audio", label: "Park" },
+      { id: "places_movies", type: "audio", label: "Movies" },
+      { id: "places_church", type: "audio", label: "Church" },
+      { id: "places_dave_n_busters", type: "audio", label: "Dave & Busters" },
+    ]
+  },
+  {
+    id: "shopping",
+    parentId: "places",
+    slug: "/p/shopping",
+    title: "Shopping",
+    bgColor: COLOR_HOME, //todo change color
+    grid: { cols: 3, rows: 1 },
+    buttons: [
+      { id: "places_mall", type: "audio", label: "Mall" },
+      { id: "places_target", type: "audio", label: "Target" },
+      { id: "places_dollar_general", type: "audio", label: "Dollar General" }
+    ]
+  },
+  {
+    id: "i_did",
+    parentId: "home",
+    slug: "/p/i_did",
+    title: "I Did ...",
+    bgColor: COLOR_HOME, //todo change color
+    grid: { cols: 2, rows: 2 },
+    buttons: [
+      { id: "i_did_i_felt", type: "link", label: "I Felt ...", linkPageId: "i_felt" },
+      { id: "i_did_i_ate", type: "link", label: "I Ate ...", linkPageId: "i_ate" },
+      { id: "i_did_i_went_to", type: "link", label: "I went to ...", linkPageId: "i_went_to" },
+      { id: "i_did_i_taked_to", type: "link", label: "I talked to ...", linkPageId: "i_talked_to" }
+    ]
+  },
+  {
+    id: "i_felt",
+    parentId: "i_did",
+    slug: "/p/i_felt",
+    title: "I Felt ...",
+    bgColor: COLOR_HOME,
+    grid: { cols: 3, rows: 1 },
+    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
+  },{
+    id: "i_ate",
+    parentId: "i_did",
+    slug: "/p/i_ate",
+    title: "I Ate ...",
+    bgColor: COLOR_HOME,
+    grid: { cols: 3, rows: 1 },
+    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
+  },{
+    id: "i_went_to",
+    parentId: "i_did",
+    slug: "/p/i_went_to",
+    title: "I Went To ...",
+    bgColor: COLOR_HOME,
+    grid: { cols: 3, rows: 1 },
+    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
+  },{
+    id: "i_talked_to",
+    parentId: "i_did",
+    slug: "/p/i_talked_to",
+    title: "I talked to ...",
+    bgColor: COLOR_HOME,
+    grid: { cols: 3, rows: 1 },
+    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
+  },
+  {
+    id: "i_need",
+    parentId: "home",
+    slug: "/p/i_need",
+    title: "I Need ...",
+    bgColor: COLOR_HOME,
+    grid: { cols: 2, rows: 2 },
+    buttons: [
+      { id: "i_need_bathroom", type: "audio", label: "Bathroom" },
+      { id: "i_need_help", type: "audio", label: "Help" },
+      { id: "i_need_sleep", type: "audio", label: "Sleep" },
+      { id: "i_need_nedicine", type: "audio", label: "Medicine" }
+    ]
+  },
+  {
+    id: "feelings",
+    parentId: "home",
+    slug: "/p/feelings",
+    title: "Feelings" ,
+    bgColor: COLOR_HOME,
+    grid: { cols: 4, rows: 2 },
+    buttons: [
+      { id: "feelings_sick", type: "link", label: "Sick", linkPageId :"sick" },
+      { id: "feelings_hot", type: "audio", label: "Hot" },
+      { id: "feelings_hurt", type: "link", label: "Hurt", linkPageId :"hurt" },
+      { id: "feelings_cold", type: "audio", label: "Cold" },
+      { id: "feelings_angry", type: "audio", label: "Angry" },
+      { id: "feelings_happy", type: "audio", label: "Happy" },
+      { id: "feelings_bored", type: "audio", label: "Bored" },
+      { id: "feelings_sad", type: "audio", label: "Sad" }
+    ]
+  },
+  {
+    id: "sick",
+    parentId: "feelings",
+    slug: "/p/sick",
+    title: "Sick" ,
+    bgColor: COLOR_HOME,
+    grid: { cols: 2, rows: 2 },
+    buttons: [
+      { id: "feelings_sore_throat", type: "audio", label: "Sore Throat" },
+      { id: "feelings_cramps", type: "audio", label: "Cramps" },
+      { id: "feelings_headache", type: "audio", label: "Headache" },
+      { id: "feelings_stoamch_ache", type: "audio", label: "Stomach Ache" }
+    ]
+  },
+  {
+    id: "hurt",
+    parentId: "feelings",
+    slug: "/p/hurt",
+    title: "Hurt" ,
+    bgColor: COLOR_HOME,
+    grid: { cols: 2, rows: 2 },
+    buttons: [
+      { id: "feelings_head", type: "audio", label: "Head" },
+      { id: "feelings_stomach", type: "audio", label: "Stomach" },
+      { id: "feelings_legs", type: "audio", label: "Legs" },
+      { id: "feelings_arms", type: "audio", label: "Arms" }
+    ]
+  },
+  {
+    id: "chat",
+    parentId: "home",
+    slug: "/p/chat",
+    title: "Home" ,
+    bgColor: COLOR_HOME,
+    grid: { cols: 4, rows: 2 },
+    buttons: [
+      { id: "chat_maybe", type: "audio", label: "Maybe" },
+      { id: "chat_done", type: "audio", label: "Done" },
+      { id: "chat_later", type: "audio", label: "Later" },
+      { id: "chat_more", type: "audio", label: "More" },
+      { id: "chat_idk", type: "audio", label: "I Don't Know" },
+      { id: "chat_stop", type: "audio", label: "Stop" },
+      { id: "chat_ty", type: "audio", label: "Thank You" },
+      { id: "chat_please", type: "audio", label: "Please" }
+    ]
+  },{
+    id: "people",
+    parentId: "home",
+    slug: "/p/people",
+    title: "People" ,
+    bgColor: COLOR_HOME,
+    grid: { cols: 2, rows: 4 },
+    buttons: [
+      { id: "people_mom", type: "audio", label: "Mom" },
+      { id: "people_doctor", type: "audio", label: "Doctor" },
+      { id: "people_teacher", type: "audio", label: "Teaher" },
+      { id: "people_dog", type: "audio", label: "Dog" },
+      { id: "people_cat", type: "audio", label: "Cat" },
+      { id: "people_he", type: "audio", label: "He" },
+      { id: "people_her", type: "audio", label: "Her" },
+      { id: "people_chizenum", type: "audio", label: "Chizenum" }
     ]
   }
 ];
