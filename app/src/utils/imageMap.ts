@@ -92,7 +92,7 @@ import ThankyouImg from "../assets/thank_you.png";
 import PleaseImg from "../assets/please.png";
 
 //Needs
-import HelpImg from "../assets/help!.jpg";
+import HelpImg from "../assets/help_new.jpg";
 import SleepImg from "../assets/Sleep_new.png";
 import MedicineImg from "../assets/Medicine.png";
 
