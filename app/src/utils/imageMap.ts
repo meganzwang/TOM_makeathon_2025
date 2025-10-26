@@ -109,6 +109,16 @@ import StomachImg from "../assets/stomach.png";
 import LegsImg from "../assets/legs.jpg";
 import ArmsImg from "../assets/arm.jpg";
 
+//People
+import MomImg from "../assets/mom.png";
+import DoctorImg from "../assets/doctor.png";
+import TeacherImg from "../assets/teacher.png";
+import DogImg from "../assets/dog.png";
+import CatImg from "../assets/cat.png";
+import HePersonImg from "../assets/he.png";
+import ShePersonImg from "../assets/she.png";
+import ChizenumImg from "../assets/chizenum.png";
+
 
 export const staticImageMap: Record<string, string> = {
   // Home page
@@ -224,6 +234,16 @@ export const staticImageMap: Record<string, string> = {
   "I Felt ..." : FeelingsImg,
   "I Ate ..." : HungryImg,
   "I went to ..." : PlacesImg,
-  "I talked to ..." : PeopleImg
+  "I talked to ..." : PeopleImg,
+
+  //People
+  "Mom": MomImg,
+  "Doctor": DoctorImg,
+  "Teaher": TeacherImg,
+  "Dog": DogImg,
+  "Cat": CatImg,
+  "He": HePersonImg,
+  "Her": ShePersonImg,
+  "Chizenum": ChizenumImg
 
 };
