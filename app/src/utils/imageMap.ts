@@ -93,7 +93,11 @@ import PleaseImg from "../assets/please.png";
 
 //Needs
 import HelpImg from "../assets/help_new.jpg";
+<<<<<<< HEAD
 import SleepImg from "../assets/sleep_new.png";
+=======
+import SleepImg from "../assets/Sleep_new.png";
+>>>>>>> d488870f1a6ae2e7e0a5c83940ab441bffdc651c
 import MedicineImg from "../assets/Medicine.png";
 
 //Feelings
