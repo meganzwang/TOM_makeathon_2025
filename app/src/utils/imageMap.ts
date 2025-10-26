@@ -88,6 +88,11 @@ import StopImg from "../assets/stop.png";
 import ThankyouImg from "../assets/thank_you.png";
 import PleaseImg from "../assets/please.png";
 
+//Needs
+import HelpImg from "../assets/help!.jpg";
+import SleepImg from "../assets/Sleep.png";
+import MedicineImg from "../assets/Medicine.png";
+
 //Feelings
 import SickImg from "../assets/sick.jpg";
 import HotImg from "../assets/hot.png";
@@ -97,6 +102,12 @@ import HurtImg from "../assets/hurt!.png";
 import AngryImg from "../assets/angry!.png";
 import BoredImg from "../assets/bored.jpg";
 import SadImg from "../assets/sad.jpg";
+
+//Hurt
+import HeadImg from "../assets/Head.png";
+import StomachImg from "../assets/stomach.png";
+import LegsImg from "../assets/legs.jpg";
+import ArmsImg from "../assets/arm.jpg";
 
 //People
 import MomImg from "../assets/mom.png";
@@ -198,6 +209,10 @@ export const staticImageMap: Record<string, string> = {
   "Thank You" : ThankyouImg,
   "Please" : PleaseImg,
 
+  //Needs sub 
+  "Help": HelpImg,
+  "Sleep" : SleepImg, 
+  "Medicine" : MedicineImg,
 
   // Feelings
   "Sick": SickImg,
@@ -208,6 +223,12 @@ export const staticImageMap: Record<string, string> = {
   "Angry": AngryImg,
   "Bored": BoredImg,
   "Sad": SadImg,
+
+  //Hurt sub 
+  "Head" : HeadImg,
+  "Stomach" : StomachImg,
+  "Legs" : LegsImg,
+  "Arms" : ArmsImg,
   
   //I did menu
   "I Felt ..." : FeelingsImg,
