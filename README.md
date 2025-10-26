@@ -152,7 +152,7 @@ The application includes the following pre-configured pages:
 
 Images are pre-loaded and mapped in `app/src/utils/imageMap.ts`. To add new images:
 
-1. Place image files in `app/src/assets/`
+1. Place image files in `app/src/assets/`. Images should be named in lowercase and separated by underscores(_).
 2. Import the image in `imageMap.ts`
 3. Add mapping: `"Button Label": ImageVariable`
 
