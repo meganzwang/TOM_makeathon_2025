@@ -291,7 +291,7 @@ const defaultPages: PageDef[] = [
     slug: "/p/people",
     title: "People" ,
     bgColor: COLOR_HUNGRY,
-    grid: { cols: 2, rows: 4 },
+    grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "people_mom", type: "audio", label: "Mom" },
       { id: "people_doctor", type: "audio", label: "Doctor" },
