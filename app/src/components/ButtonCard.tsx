@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { ButtonItem } from "../types";
 import { getAssetUrl } from "../store/db";
+import { staticImageMap } from "../utils/imageMap";
 
 type Props = {
   btn: ButtonItem;
@@ -47,19 +48,40 @@ export default function ButtonCard({ btn, pageBg, radius = "fourxl" }: Props) {
   return (
     <button
       onClick={handleClick}
-      className={`m-2 w-full h-full ${rounding} shadow-sm border ring-1 ring-white/20 bg-brand text-white flex flex-col items-center justify-start overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60`}
-      style={{ backgroundColor: "#9146FF" }}
+      className={`m-1 w-full h-full !rounded-xl shadow-xl flex flex-col items-center justify-start overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 hover:scale-[1.02] active:scale-[0.98] transition-transform relative`}
+      style={{ backgroundColor: "#FFFFFF", border: "3px solid #9146FF" }}
     >
-      <div className="w-full px-2 pt-2 text-center">
-        <div className="flex items-center justify-center gap-2">
-          <span className="font-poppins font-bold text-white text-lg">{btn.label}</span>
-          {btn.type === "link" && (
-            <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-brand font-bold">+</span>
-          )}
+      {btn.type === "link" && (
+        <div
+          className="flex items-center justify-center rounded-full shadow-md"
+          style={{
+            position: "absolute",
+            top: "8px",
+            right: "8px",
+            zIndex: 30,
+            width: "32px",
+            height: "32px",
+            backgroundColor: "transparent",
+            border: "2.5px solid #9146FF"
+          }}
+        >
+          <span className="font-extrabold" style={{ fontSize: "22px", color: "#9146FF", lineHeight: "1", display: "flex", alignItems: "center", justifyContent: "center" }}>+</span>
         </div>
+      )}
+      <div className="w-full px-3 pt-2 pb-2 text-center">
+        <span
+          className="font-bold leading-none tracking-tight"
+          style={{
+            fontSize: "28px",
+            color: "#9146FF",
+            fontFamily: "Outfit, sans-serif"
+          }}
+        >
+          {btn.label}
+        </span>
       </div>
-      <div className="flex-1 w-full px-4 pb-4 flex items-center justify-center">
-        <CardImage btn={btn} rounding={rounding} bg={pageBg} />
+      <div className="flex-1 w-full px-2 pb-2 pt-2 flex items-center justify-center overflow-hidden">
+        <CardImage btn={btn} rounding="rounded-2xl" bg={pageBg} />
       </div>
     </button>
   );
@@ -68,6 +90,8 @@ export default function ButtonCard({ btn, pageBg, radius = "fourxl" }: Props) {
 function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: string }) {
   const [imgUrl, setImgUrl] = useState<string | null>(null);
 
+  // Check for static image first
+  const staticImage = staticImageMap[btn.label];
 
   React.useEffect(() => {
     let revoked: string | null = null;
@@ -85,16 +109,38 @@ function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: s
     };
   }, [btn.imageAssetId]);
 
+  // Prefer static image, then dynamic asset, then placeholder
+  if (staticImage) {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <img src={staticImage} alt={btn.label} className="max-h-full max-w-full object-contain" style={{ maxHeight: "100%", maxWidth: "100%" }} />
+      </div>
+    );
+  }
+
   if (imgUrl) {
-    return <img src={imgUrl} alt={btn.label} className="max-h-full max-w-full object-contain" />;
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <img src={imgUrl} alt={btn.label} className="max-h-full max-w-full object-contain" style={{ maxHeight: "100%", maxWidth: "100%" }} />
+      </div>
+    );
   }
 
   // Placeholder: initial
   const placeholderRound = rounding === "rounded-full" ? "rounded-2xl" : rounding;
   const initial = btn.label?.charAt(0)?.toUpperCase() ?? "?";
   return (
-    <div className={`h-24 w-24 ${placeholderRound} bg-white/20 border border-white/30 flex items-center justify-center`}>
-      <span className="font-poppins font-bold text-2xl text-white">{initial}</span>
+    <div className={`h-36 w-36 rounded-xl bg-purple-100 border-2 flex items-center justify-center shadow-lg`} style={{ borderColor: "#9146FF" }}>
+      <span
+        className="font-extrabold"
+        style={{
+          fontSize: "48px",
+          color: "#9146FF",
+          fontFamily: "Outfit, sans-serif"
+        }}
+      >
+        {initial}
+      </span>
     </div>
   );
 }

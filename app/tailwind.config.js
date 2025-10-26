@@ -7,7 +7,7 @@ export default {
         brand: "#9146FF"
       },
       fontFamily: {
-        poppins: ["Poppins", "ui-sans-serif", "system-ui"]
+        sans: ["Outfit", "ui-sans-serif", "system-ui"]
       }
     }
   },

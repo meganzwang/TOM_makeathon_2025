@@ -15,17 +15,17 @@ function speak(text: string) {
 export default function BottomBar({ onYes, onHelp, onNo }: Props) {
   return (
     <div className="bg-transparent pb-[var(--safe-bottom)] flex justify-center">
-      <div className="flex items-center justify-center gap-6 py-6">
-        <LowButton 
-        label="Yes" 
+      <div className="flex items-center justify-center gap-48 py-3 px-8">
+        <LowButton
+        label="Yes"
         color="green"
         onClick={() => (onYes?.(), speak("Yes"))} />
-        <LowButton 
+        <LowButton
         label="Help!!"
-        color="dark gray" 
+        color="dark gray"
         onClick={() => (onHelp?.(), speak("Help"))} />
-        <LowButton 
-        label="No" 
+        <LowButton
+        label="No"
         color="red"
         onClick={() => (onNo?.(), speak("No"))} />
       </div>
@@ -48,20 +48,20 @@ function LowButton({ label, onClick, color }: { label: string; onClick: () => vo
     onClick={onClick}
     className="
     text-white
-    rounded-[5px] px-32 py-100
-    front-poppins font-bold
-    hover: opacity-90 active:scale-95
-    tranition-transform shadow-sm
+    rounded-2xl
+    font-bold
+    hover:opacity-90 hover:scale-105 active:scale-95
+    transition-all shadow-2xl
+    border-2 border-white/20
     "
-      //rounded-full bg-brand/80 text-white px-4 py-2 shadow-sm border border-white/20 hover:bg-brand"
       style={{
-        minWidth: "175px",
-        minHeight: "90px",
+        minWidth: "150px",
+        minHeight: "60px",
         backgroundColor: bgColor,
-        border: `2px solid ${bgColor}`,
         color: "#ffffff",
-        fontSize: "48px",
-        lineHeight: "48px"
+        fontSize: "32px",
+        lineHeight: "32px",
+        padding: "0 40px"
       }}
     >
       {label}
