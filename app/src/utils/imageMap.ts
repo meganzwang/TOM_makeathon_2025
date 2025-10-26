@@ -54,7 +54,7 @@ import SwimmingImg from "../assets/swimming.png";
 // Art sub-items
 import DrawingImg from "../assets/drawing.png";
 import ColorImg from "../assets/color.png";
-import PaintingImg from "../assets/painting.png";
+import PaintingImg from "../assets/paint!.png";
 
 // TV shows
 import NurseryRhymesImg from "../assets/nursery_rhymes.png";
