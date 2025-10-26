@@ -251,7 +251,7 @@ export const staticImageMap: Record<string, string> = {
   "Sore Throat" : SoreThroatImg,
   "Cramps" : CrampsImg,
   "Headache" : HeadacheImg,
-  "Stomachache" : StomachacheImg,
+  "Stomach Ache" : StomachacheImg,
 
   
   //I did menu
@@ -275,4 +275,3 @@ export const staticImageMap: Record<string, string> = {
   "Bye" : ByeImg,
   
 };
-
