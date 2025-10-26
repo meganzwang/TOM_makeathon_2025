@@ -94,7 +94,7 @@ export const staticImageMap: Record<string, string> = {
   "Paint": PaintingImg,
 
   // TV
-  "Nursery": NurseryRhymesImg,
+  "Nursery Rhymes": NurseryRhymesImg,
   "Lorax" : LoraxImg,
   "Clifford": CliffordImg, 
   "Netflix": NetflixImg,
