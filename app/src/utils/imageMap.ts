@@ -39,6 +39,10 @@ import PaintingImg from "../assets/painting.png";
 
 // TV shows
 import NurseryRhymesImg from "../assets/nursery_rhymes.png";
+import LoraxImg from "../assets/lorax.png";
+import CliffordImg from "../assets/Clifford.png";
+import NetflixImg from "../assets/Netflix.png";
+import WordGirl from "../assets/wordGirl.png";
 import CatInTheHatImg from "../assets/cat_in_the_hat.png";
 import PBSImg from "../assets/pbs_kids.png";
 import CookingShowImg from "../assets/cooking_show.png";
@@ -91,6 +95,10 @@ export const staticImageMap: Record<string, string> = {
 
   // TV
   "Nursery": NurseryRhymesImg,
+  "Lorax" : LoraxImg,
+  "Clifford": CliffordImg, 
+  "Netflix": NetflixImg,
+  "Word Girl": WordGirl,  
   "Cat & Hat": CatInTheHatImg,
   "PBS": PBSImg,
   "Cooking Show": CookingShowImg,
