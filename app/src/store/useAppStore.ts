@@ -37,7 +37,7 @@ const defaultPages: PageDef[] = [
       { id: "b_h_meal", type: "link", label: "Meal", linkPageId: "meal" },
       { id: "b_h_snack", type: "link", label: "Snack", linkPageId: "snack" },
       { id: "b_h_drink", type: "link", label: "Drink", linkPageId: "drink" },
-      { id: "b_h_dessert", type: "link", label: "Dessert", linkPageId: "dessert" }
+      { id: "b_h_dessert", type: "link", label: "Dessert", linkPageId: "Dessert" }
     ]
   },
   {
@@ -151,7 +151,7 @@ const defaultPages: PageDef[] = [
       { id: "places_resturants", type: "link", label: "Restaurants", linkPageId: "restaurants" },
       { id: "places_bathroom", type: "audio", label: "Bathroom" },
       { id: "places_bowling", type: "audio", label: "Bowling" },
-      { id: "places_shopping", type: "link", label: "Shopping", linkPageId: "shopping" },
+      { id: "places_shopping", type: "link", label: "Shopping", linkPageId: "Shopping" },
       { id: "places_home", type: "audio", label: "Home" },
       { id: "places_park", type: "audio", label: "Park" },
       { id: "places_movies", type: "audio", label: "Movies" },

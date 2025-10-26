@@ -1,15 +1,22 @@
 // Static image mappings for button labels
-import ActivitiesImg from "../assets/Activities.png";
-import ChatImg from "../assets/Chat.png";
-import FeelingsImg from "../assets/Feelings.png";
 import HungryImg from "../assets/Hungry.png";
+import ActivitiesImg from "../assets/Activities.png";
+
+import ChatImg from "../assets/Chat.png";
 import NeedsImg from "../assets/Needs.png";
+import FeelingsImg from "../assets/Feelings.png";
+
 import PeopleImg from "../assets/People.png";
 import QuestionImg from "../assets/Question.png";
-import RestaurantImg from "../assets/restaurant.png";
-import YogaImg from "../assets/yoga.png";
 
-// Restaurants
+//Hungry sub-items
+import RestaurantImg from "../assets/restaurant.png";
+import DrinkImg from "../assets/drink.png";
+import SnacksImg from "../assets/snacks.png";
+import FoodImg from "../assets/food.png";
+import DessertImg from "../assets/dessert.png";
+
+// Restaurants sub-items
 import ZaxbysImg from "../assets/zaxbys.png";
 import IHOPImg from "../assets/IHOP.png";
 import KrogerImg from "../assets/kroger.png";
@@ -23,8 +30,19 @@ import PandaImg from "../assets/panda_express.png";
 import ThaiPapayaImg from "../assets/thai_papaya.png";
 import FatMOsImg from "../assets/fat_MO.png";
 
+//Meal
+
+//Snack
+
+//Drink 
+
+//Dessert
+
+//Shopping
+
 // Activities
 import ArtImg from "../assets/art.png";
+import YogaImg from "../assets/yoga.png";
 import DanceImg from "../assets/dance.png";
 import MusicImg from "../assets/music.png";
 import TVImg from "../assets/tv.png";
@@ -47,23 +65,42 @@ import CatInTheHatImg from "../assets/cat_in_the_hat.png";
 import PBSImg from "../assets/pbs_kids.png";
 import CookingShowImg from "../assets/cooking_show.png";
 
-// Food
-import DrinkImg from "../assets/drink.png";
-import SnacksImg from "../assets/snacks.png";
-import FoodImg from "../assets/food.png";
-import DessertImg from "../assets/dessert.png";
+//Places 
+import ShoppingImg from "../assets/shopping bag.jpg";
+import MoviesImg from "../assets/movie_theater.png";
+import BathroomImg from "../assets/bathroom.png";
+
+import ChurchImg from "../assets/church.png";
+
+
+import DaveAndBustersImg from "../assets/dave_busters.png";
+
+//Shopping 
+//import MallImg from "";
+import TargetImg from "../assets/target.png";
+import DollarGeneralImg from "../assets/dollar_general.png";
+
 
 export const staticImageMap: Record<string, string> = {
   // Home page
   "Hungry": HungryImg,
   "Activities": ActivitiesImg,
+  //"Places" : PlacesImg,
   "Chat": ChatImg,
   "Needs": NeedsImg,
   "Feelings": FeelingsImg,
+  //"I Did" : IdidImg, 
   "People": PeopleImg,
   "Questions": QuestionImg,
-  "Restaurants": RestaurantImg,
   "Yoga": YogaImg,
+
+  // Food
+  "Restaurants": RestaurantImg,
+  "Drink": DrinkImg,
+  "Snack": SnacksImg,
+  "Restaurant": RestaurantImg,
+  "Meal": FoodImg,
+  "Dessert" : DessertImg,
 
   // Restaurants
   "Zaxby's": ZaxbysImg,
@@ -78,6 +115,26 @@ export const staticImageMap: Record<string, string> = {
   "Panda Express": PandaImg,
   "Thai Papaya": ThaiPapayaImg,
   "Fat MO's": FatMOsImg,
+
+  //Meals 
+  //Snacks
+  //Drink
+  //Dessert 
+
+  //Places
+  "Shopping" : ShoppingImg,
+  "Movies" : MoviesImg,
+  "Bathroom" : BathroomImg,
+  //"Home" : HomeImg,
+  "Church" : ChurchImg,
+  //"Bowling" : BowlingImg,
+  //"Park" : ParkImg,
+  "Dave & Busters" : DaveAndBustersImg,
+
+  //Shopping sub-items
+  //"Mall" : MallImg, 
+  "Target" : TargetImg,
+  "Dollar General" : DollarGeneralImg,
 
   // Activities
   "Art": ArtImg,
@@ -103,9 +160,4 @@ export const staticImageMap: Record<string, string> = {
   "PBS": PBSImg,
   "Cooking Show": CookingShowImg,
 
-  // Food
-  "Drink": DrinkImg,
-  "Snack": SnacksImg,
-  "Restaurant": RestaurantImg,
-  "Meal": FoodImg,
 };
