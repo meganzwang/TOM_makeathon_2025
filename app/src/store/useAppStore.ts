@@ -34,8 +34,8 @@ const defaultPages: PageDef[] = [
     grid: { cols: 2, rows: 3 },
     buttons: [
       { id: "b_h_rest", type: "link", label: "Restaurant", linkPageId: "restaurants", colSpan: 2 },
-      { id: "b_h_meal", type: "link", label: "Meal", linkPageId: "meal" },
-      { id: "b_h_snack", type: "link", label: "Snack", linkPageId: "snack" },
+      { id: "b_h_meal", type: "audio", label: "Meal", linkPageId: "meal" }, //changed from link as
+      { id: "b_h_snack", type: "audio", label: "Snack", linkPageId: "snack" }, //dont know what to put on page
       { id: "b_h_drink", type: "link", label: "Drink", linkPageId: "drink" },
       { id: "b_h_dessert", type: "link", label: "Dessert", linkPageId: "Dessert" }
     ]
