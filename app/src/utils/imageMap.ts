@@ -25,7 +25,7 @@ import WendysImg from "../assets/wendys.png";
 import OliveGardenImg from "../assets/Olive_garden.png";
 import CheesecakeImg from "../assets/cheesecakefactory.png";
 import ThidaThaiImg from "../assets/Thida_Thai.png";
-import TazikiImg from "../assets/tzaskik's.png";
+import TazikiImg from "../assets/taziki!.png";
 import PandaImg from "../assets/panda_express.png";
 import ThaiPapayaImg from "../assets/thai_papaya.png";
 import FatMOsImg from "../assets/fat_MO.png";
