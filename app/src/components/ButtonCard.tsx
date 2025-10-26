@@ -7,23 +7,10 @@ import { staticImageMap } from "../utils/imageMap";
 type Props = {
   btn: ButtonItem;
   pageBg: string;
-  radius?: "sm" | "md" | "lg" | "xl" | "twoxl" | "fourxl" | "sixxl" | "full";
 };
 
-const radiusMap = {
-  sm: "rounded-sm",
-  md: "rounded-md",
-  lg: "rounded-lg", 
-  xl: "rounded-xl",
-  twoxl: "rounded-2xl",
-  fourxl: "rounded-4xl",
-  sixxl: "rounded-6xl",
-  full: "rounded-full"
-};
-
-export default function ButtonCard({ btn, pageBg, radius = "fourxl" }: Props) {
+export default function ButtonCard({ btn, pageBg }: Props) {
   const nav = useNavigate();
-  const rounding = radiusMap[radius];
 
   const handleClick = async () => {
     if (btn.type === "link" && btn.linkPageId) return nav(`/p/${btn.linkPageId}`);
@@ -48,8 +35,18 @@ export default function ButtonCard({ btn, pageBg, radius = "fourxl" }: Props) {
   return (
     <button
       onClick={handleClick}
-      className={`m-1 w-full h-full !rounded-xl shadow-xl flex flex-col items-center justify-start overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 hover:scale-[1.02] active:scale-[0.98] transition-transform relative`}
-      style={{ backgroundColor: "#FFFFFF", border: "3px solid #9146FF" }}
+      className={`m-1 w-full h-full !rounded-xl shadow-xl flex flex-col items-center justify-start overflow-hidden 
+        focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-400 
+        hover:scale-[1.05] hover:shadow-2xl hover:border-purple-600
+        active:scale-[0.95] active:shadow-lg active:border-purple-700
+        transition-all duration-200 ease-out
+        relative cursor-pointer select-none
+        touch-manipulation`}
+      style={{ 
+        backgroundColor: "#FFFFFF", 
+        border: "3px solid #9146FF",
+        willChange: "transform, box-shadow, border-color"
+      }}
     >
       {btn.type === "link" && (
         <div
@@ -81,13 +78,13 @@ export default function ButtonCard({ btn, pageBg, radius = "fourxl" }: Props) {
         </span>
       </div>
       <div className="flex-1 w-full px-2 pb-2 pt-2 flex items-center justify-center overflow-hidden">
-        <CardImage btn={btn} rounding="rounded-2xl" bg={pageBg} />
+        <CardImage btn={btn} bg={pageBg} />
       </div>
     </button>
   );
 }
 
-function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: string }) {
+function CardImage({ btn }: { btn: ButtonItem; bg: string }) {
   const [imgUrl, setImgUrl] = useState<string | null>(null);
 
   // Check for static image first
@@ -127,7 +124,6 @@ function CardImage({ btn, rounding }: { btn: ButtonItem; rounding: string; bg: s
   }
 
   // Placeholder: initial
-  const placeholderRound = rounding === "rounded-full" ? "rounded-2xl" : rounding;
   const initial = btn.label?.charAt(0)?.toUpperCase() ?? "?";
   return (
     <div className={`h-36 w-36 rounded-xl bg-purple-100 border-2 flex items-center justify-center shadow-lg`} style={{ borderColor: "#9146FF" }}>

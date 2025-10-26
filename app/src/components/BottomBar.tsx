@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
   onYes?: () => void;
   onHelp?: () => void;
@@ -50,9 +48,12 @@ function LowButton({ label, onClick, color }: { label: string; onClick: () => vo
     text-white
     rounded-2xl
     font-bold
-    hover:opacity-90 hover:scale-105 active:scale-95
-    transition-all shadow-2xl
+    hover:opacity-90 hover:scale-110 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)]
+    active:scale-95 active:shadow-xl
+    transition-all duration-200 ease-out shadow-2xl
     border-2 border-white/20
+    cursor-pointer select-none touch-manipulation
+    focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50
     "
       style={{
         minWidth: "150px",
@@ -61,7 +62,8 @@ function LowButton({ label, onClick, color }: { label: string; onClick: () => vo
         color: "#ffffff",
         fontSize: "32px",
         lineHeight: "32px",
-        padding: "0 40px"
+        padding: "0 40px",
+        willChange: "transform, box-shadow, opacity"
       }}
     >
       {label}
