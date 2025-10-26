@@ -149,7 +149,8 @@ const defaultPages: PageDef[] = [
       { id: "tv_pbs", type: "audio", label: "PBS" },
       { id: "tv_cook", type: "audio", label: "Cooking Show" }
     ]
-  },{
+  },
+  {
     id: "places",
     parentId: "home",
     slug: "/p/places",
@@ -203,7 +204,8 @@ const defaultPages: PageDef[] = [
     bgColor: COLOR_HOME,
     grid: { cols: 3, rows: 1 },
     buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
-  },{
+  },
+  {
     id: "i_ate",
     parentId: "i_did",
     slug: "/p/i_ate",
@@ -211,7 +213,8 @@ const defaultPages: PageDef[] = [
     bgColor: COLOR_HOME,
     grid: { cols: 3, rows: 1 },
     buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
-  },{
+  },
+  {
     id: "i_went_to",
     parentId: "i_did",
     slug: "/p/i_went_to",
@@ -219,7 +222,8 @@ const defaultPages: PageDef[] = [
     bgColor: COLOR_HOME,
     grid: { cols: 3, rows: 1 },
     buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
-  },{
+  },
+  {
     id: "i_talked_to",
     parentId: "i_did",
     slug: "/p/i_talked_to",
@@ -305,7 +309,8 @@ const defaultPages: PageDef[] = [
       { id: "chat_ty", type: "audio", label: "Thank You" },
       { id: "chat_please", type: "audio", label: "Please" }
     ]
-  },{
+  },
+  {
     id: "people",
     parentId: "home",
     slug: "/p/people",
