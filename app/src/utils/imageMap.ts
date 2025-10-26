@@ -1,7 +1,7 @@
 // Static image mappings for button labels
 import HungryImg from "../assets/Hungry.png";
 import ActivitiesImg from "../assets/Activities.png";
-import PlacesImg from "../assets/places.png";
+import PlacesImg from "../assets/place.png";
 import ChatImg from "../assets/Chat.png";
 import NeedsImg from "../assets/I_need.png";
 import FeelingsImg from "../assets/Feelings.png";
@@ -79,14 +79,15 @@ import TargetImg from "../assets/target.png";
 import DollarGeneralImg from "../assets/dollar_general.png";
 
 //Chat
-//import MaybeImg from "../assets/maybe.png";
-//import DoneImg from "../assets/done.png";
-//import LaterImg from "../assets/later.png";
-//import MoreImg from "../assets/more.png";
+import MaybeImg from "../assets/maybe.png";
+import DoneImg from "../assets/done.png";
+import LaterImg from "../assets/later.png";
+import MoreImg from "../assets/more.png";
 import IDKImg from "../assets/idk.png";
-//import StopImg from "../assets/stop.png";
-//import ThankyouImg from "../assets/thankyou.png";
-//import PleaseImg from "../assets/please.png";
+import StopImg from "../assets/stop.png";
+import ThankyouImg from "../assets/thank_you.png";
+import PleaseImg from "../assets/please.png";
+
 //Feelings
 import SickImg from "../assets/sick.jpg";
 import HotImg from "../assets/hot.png";
@@ -178,17 +179,17 @@ export const staticImageMap: Record<string, string> = {
   "Cooking Show": CookingShowImg,
 
   //Chat sub 
-  //"Maybe" : MaybeImg, 
-  //"Done" : DoneIMg,
-  //"Later" : LaterImg
-  //"More" : MoreImg 
+  "Maybe" : MaybeImg, 
+  "Done" : DoneImg,
+  "Later" : LaterImg,
+  "More" : MoreImg, 
   "I Don't Know" : IDKImg,
-  //"Stop" : StopImg,
-  //"Thank You" : ThankYouImg,
-  //"Please" : PleaseImg,
-  // Feelings
+  "Stop" : StopImg,
+  "Thank You" : ThankyouImg,
+  "Please" : PleaseImg,
 
-  
+
+  // Feelings
   "Sick": SickImg,
   "Hot": HotImg,
   "Cold": ColdImg,
