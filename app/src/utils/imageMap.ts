@@ -1,9 +1,9 @@
 // Static image mappings for button labels
 import HungryImg from "../assets/Hungry.png";
 import ActivitiesImg from "../assets/Activities.png";
-import PlacesImg from "../assets/Places.png";
+import PlacesImg from "../assets/places.png";
 import ChatImg from "../assets/Chat.png";
-import NeedsImg from "../assets/Needs.png";
+import NeedsImg from "../assets/I_need.png";
 import FeelingsImg from "../assets/Feelings.png";
 import IdidImg from "../assets/IDID.png";
 import PeopleImg from "../assets/People.png";
@@ -74,7 +74,7 @@ import ParkImg from "../assets/park.png";
 import DaveAndBustersImg from "../assets/dave_busters.png";
 
 //Shopping 
-import MallImg from "../assets/Mall.png";
+import MallImg from "../assets/mall.png";
 import TargetImg from "../assets/target.png";
 import DollarGeneralImg from "../assets/dollar_general.png";
 
@@ -87,6 +87,15 @@ import IDKImg from "../assets/idk.png";
 //import StopImg from "../assets/stop.png";
 //import ThankyouImg from "../assets/thankyou.png";
 //import PleaseImg from "../assets/please.png";
+//Feelings
+import SickImg from "../assets/sick.jpg";
+import HotImg from "../assets/hot.png";
+import ColdImg from "../assets/cold.jpg";
+import HappyImg from "../assets/happy.png";
+import HurtImg from "../assets/Hurt.png";
+import AngryImg from "../assets/mad.png";
+import BoredImg from "../assets/bored.jpg";
+import SadImg from "../assets/sad.jpg";
 
 
 export const staticImageMap: Record<string, string> = {
@@ -177,4 +186,22 @@ export const staticImageMap: Record<string, string> = {
   //"Stop" : StopImg,
   //"Thank You" : ThankYouImg,
   //"Please" : PleaseImg,
+  // Feelings
+
+  
+  "Sick": SickImg,
+  "Hot": HotImg,
+  "Cold": ColdImg,
+  "Happy": HappyImg,
+  "Hurt": HurtImg,
+  "Angry": AngryImg,
+  "Bored": BoredImg,
+  "Sad": SadImg,
+  
+  //I did menu
+  "I Felt ..." : FeelingsImg,
+  "I Ate ..." : HungryImg,
+  "I went to ..." : PlacesImg,
+  "I talked to ..." : PeopleImg
+
 };
