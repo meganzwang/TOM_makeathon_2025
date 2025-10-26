@@ -190,47 +190,11 @@ const defaultPages: PageDef[] = [
     bgColor: COLOR_HOME, //todo change color
     grid: { cols: 2, rows: 2 },
     buttons: [
-      { id: "i_did_i_felt", type: "link", label: "I Felt ...", linkPageId: "i_felt" },
-      { id: "i_did_i_ate", type: "link", label: "I Ate ...", linkPageId: "i_ate" },
-      { id: "i_did_i_went_to", type: "link", label: "I went to ...", linkPageId: "i_went_to" },
-      { id: "i_did_i_taked_to", type: "link", label: "I talked to ...", linkPageId: "i_talked_to" }
+      { id: "i_did_i_felt", type: "link", label: "I Felt ...", linkPageId: "feelings" },
+      { id: "i_did_i_ate", type: "link", label: "I Ate ...", linkPageId: "hungry" },
+      { id: "i_did_i_went_to", type: "link", label: "I went to ...", linkPageId: "places" },
+      { id: "i_did_i_taked_to", type: "link", label: "I talked to ...", linkPageId: "people" }
     ]
-  },
-  {
-    id: "i_felt",
-    parentId: "i_did",
-    slug: "/p/i_felt",
-    title: "I Felt ...",
-    bgColor: COLOR_HOME,
-    grid: { cols: 3, rows: 1 },
-    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
-  },
-  {
-    id: "i_ate",
-    parentId: "i_did",
-    slug: "/p/i_ate",
-    title: "I Ate ...",
-    bgColor: COLOR_HOME,
-    grid: { cols: 3, rows: 1 },
-    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
-  },
-  {
-    id: "i_went_to",
-    parentId: "i_did",
-    slug: "/p/i_went_to",
-    title: "I Went To ...",
-    bgColor: COLOR_HOME,
-    grid: { cols: 3, rows: 1 },
-    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
-  },
-  {
-    id: "i_talked_to",
-    parentId: "i_did",
-    slug: "/p/i_talked_to",
-    title: "I talked to ...",
-    bgColor: COLOR_HOME,
-    grid: { cols: 3, rows: 1 },
-    buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
   },
   {
     id: "i_need",
