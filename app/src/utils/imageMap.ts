@@ -35,6 +35,9 @@ import FatMOsImg from "../assets/fat_MO.png";
 //Snack
 
 //Drink 
+import WaterImg from "../assets/water.png";
+import JuiceImg from "../assets/juice.png";
+import MilkImg from "../assets/milk.png";
 
 //Dessert
 
@@ -158,6 +161,10 @@ export const staticImageMap: Record<string, string> = {
   //Meals 
   //Snacks
   //Drink
+  "Water" : WaterImg,
+  "Juice" : JuiceImg,
+  "Milk" : MilkImg,
+  
   //Dessert 
 
   //Places
