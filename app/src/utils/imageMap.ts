@@ -1,5 +1,5 @@
 // Static image mappings for button labels
-import HungryImg from "../assets/Hungry.png";
+import HungryImg from "../assets/hungry!.png";
 import ActivitiesImg from "../assets/Activities.png";
 import PlacesImg from "../assets/place.png";
 import ChatImg from "../assets/Chat.png";
