@@ -78,6 +78,16 @@ import MallImg from "../assets/Mall.png";
 import TargetImg from "../assets/target.png";
 import DollarGeneralImg from "../assets/dollar_general.png";
 
+//Chat
+//import MaybeImg from "../assets/maybe.png";
+//import DoneImg from "../assets/done.png";
+//import LaterImg from "../assets/later.png";
+//import MoreImg from "../assets/more.png";
+import IDKImg from "../assets/idk.png";
+//import StopImg from "../assets/stop.png";
+//import ThankyouImg from "../assets/thankyou.png";
+//import PleaseImg from "../assets/please.png";
+
 
 export const staticImageMap: Record<string, string> = {
   // Home page
@@ -158,4 +168,13 @@ export const staticImageMap: Record<string, string> = {
   "PBS": PBSImg,
   "Cooking Show": CookingShowImg,
 
+  //Chat sub 
+  //"Maybe" : MaybeImg, 
+  //"Done" : DoneIMg,
+  //"Later" : LaterImg
+  //"More" : MoreImg 
+  "I Don't Know" : IDKImg,
+  //"Stop" : StopImg,
+  //"Thank You" : ThankYouImg,
+  //"Please" : PleaseImg,
 };

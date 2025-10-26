@@ -11,7 +11,7 @@ const defaultPages: PageDef[] = [
   {
     id: "home",
     slug: "/",
-    title: "Homepage",
+    title: "Chizenum's Board",
     bgColor: COLOR_HOME,
     grid: { cols: 3, rows: 3 },
     buttons: [
@@ -292,7 +292,7 @@ const defaultPages: PageDef[] = [
     id: "chat",
     parentId: "home",
     slug: "/p/chat",
-    title: "Home" ,
+    title: "Chat" ,
     bgColor: COLOR_HOME,
     grid: { cols: 4, rows: 2 },
     buttons: [
