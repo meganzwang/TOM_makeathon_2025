@@ -158,4 +158,10 @@ export const staticImageMap: Record<string, string> = {
   "PBS": PBSImg,
   "Cooking Show": CookingShowImg,
 
+  //I did menu
+  "I Felt ..." : FeelingsImg,
+  "I Ate ..." : HungryImg,
+  "I went to ..." : PlacesImg,
+  "I talked to ..." : PeopleImg
+
 };
