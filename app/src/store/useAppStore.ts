@@ -6,6 +6,8 @@ import type { PageDef, ButtonItem } from "../types";
 const COLOR_HOME = "#C3B1E1";
 const COLOR_HUNGRY = "#F3E8FF";     // customizable in settings
 const COLOR_ACTIVITIES = "#E0F2FE"; // customizable in settings
+const COLOR_PLACES = "#C3B1E1";
+const COLOR_CHAT = "#C3B1E1";
 
 const defaultPages: PageDef[] = [
   {
