@@ -3,7 +3,7 @@ import HungryImg from "../assets/Hungry.png";
 import ActivitiesImg from "../assets/Activities.png";
 import PlacesImg from "../assets/places.png";
 import ChatImg from "../assets/Chat.png";
-import NeedsImg from "../assets/Needs.png";
+import NeedsImg from "../assets/I_need.png";
 import FeelingsImg from "../assets/Feelings.png";
 import IdidImg from "../assets/IDID.png";
 import PeopleImg from "../assets/People.png";
@@ -177,5 +177,11 @@ export const staticImageMap: Record<string, string> = {
   "Angry": AngryImg,
   "Bored": BoredImg,
   "Sad": SadImg,
+  
+  //I did menu
+  "I Felt ..." : FeelingsImg,
+  "I Ate ..." : HungryImg,
+  "I went to ..." : PlacesImg,
+  "I talked to ..." : PeopleImg
 
 };
