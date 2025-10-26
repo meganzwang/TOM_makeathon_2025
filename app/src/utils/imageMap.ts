@@ -1,11 +1,11 @@
 // Static image mappings for button labels
 import HungryImg from "../assets/Hungry.png";
 import ActivitiesImg from "../assets/Activities.png";
-
+import PlacesImg from "../assets/Places.png";
 import ChatImg from "../assets/Chat.png";
 import NeedsImg from "../assets/Needs.png";
 import FeelingsImg from "../assets/Feelings.png";
-
+import IdidImg from "../assets/IDID.png";
 import PeopleImg from "../assets/People.png";
 import QuestionImg from "../assets/Question.png";
 
@@ -38,8 +38,6 @@ import FatMOsImg from "../assets/fat_MO.png";
 
 //Dessert
 
-//Shopping
-
 // Activities
 import ArtImg from "../assets/art.png";
 import YogaImg from "../assets/yoga.png";
@@ -69,14 +67,14 @@ import CookingShowImg from "../assets/cooking_show.png";
 import ShoppingImg from "../assets/shopping bag.jpg";
 import MoviesImg from "../assets/movie_theater.png";
 import BathroomImg from "../assets/bathroom.png";
-
+import HomeImg from "../assets/Home.png";
 import ChurchImg from "../assets/church.png";
-
-
+import BowlingImg from"../assets/bowling.png";
+import ParkImg from "../assets/park.png";
 import DaveAndBustersImg from "../assets/dave_busters.png";
 
 //Shopping 
-//import MallImg from "";
+import MallImg from "../assets/Mall.png";
 import TargetImg from "../assets/target.png";
 import DollarGeneralImg from "../assets/dollar_general.png";
 
@@ -85,11 +83,11 @@ export const staticImageMap: Record<string, string> = {
   // Home page
   "Hungry": HungryImg,
   "Activities": ActivitiesImg,
-  //"Places" : PlacesImg,
+  "Places" : PlacesImg,
   "Chat": ChatImg,
   "Needs": NeedsImg,
   "Feelings": FeelingsImg,
-  //"I Did" : IdidImg, 
+  "I Did" : IdidImg, 
   "People": PeopleImg,
   "Questions": QuestionImg,
   "Yoga": YogaImg,
@@ -125,14 +123,14 @@ export const staticImageMap: Record<string, string> = {
   "Shopping" : ShoppingImg,
   "Movies" : MoviesImg,
   "Bathroom" : BathroomImg,
-  //"Home" : HomeImg,
+  "Home" : HomeImg,
   "Church" : ChurchImg,
-  //"Bowling" : BowlingImg,
-  //"Park" : ParkImg,
+  "Bowling" : BowlingImg,
+  "Park" : ParkImg,
   "Dave & Busters" : DaveAndBustersImg,
 
   //Shopping sub-items
-  //"Mall" : MallImg, 
+  "Mall" : MallImg, 
   "Target" : TargetImg,
   "Dollar General" : DollarGeneralImg,
 

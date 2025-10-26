@@ -21,7 +21,7 @@ const defaultPages: PageDef[] = [
       { id: "b_home_chat", type: "link", label: "Chat", linkPageId: "chat" },
       { id: "b_home_needs", type: "link", label: "Needs", linkPageId: "i_need" },
       { id: "b_home_feelings", type: "link", label: "Feelings", linkPageId: "feelings" },
-      { id: "b_home_i_did", type: "link", label: "I Did", linkPageId: "i_did" },
+      { id: "b_home_i_did", type: "link", label: "I Did", linkPageId: "I_Did" },
       { id: "b_home_people", type: "link", label: "People" , linkPageId:"people"},
       { id: "b_home_questions", type: "audio", label: "Questions" },
     ]
@@ -94,6 +94,15 @@ const defaultPages: PageDef[] = [
     buttons: [{ id: "snack_tbd", type: "audio", label: "TBD" }]
   },
   {
+    id: "Dessert",
+    parentId: "hungry",
+    slug: "/p/Dessert",
+    title: "Dessert",
+    bgColor: COLOR_HUNGRY,
+    grid: { cols: 3, rows: 1 },
+    buttons: [{ id: "Dessert_tbd", type: "audio", label: "TBD" }]
+  },
+  {
     id: "activities",
     slug: "/p/activities",
     title: "Activities",
@@ -162,7 +171,7 @@ const defaultPages: PageDef[] = [
   {
     id: "shopping",
     parentId: "places",
-    slug: "/p/shopping",
+    slug: "/p/Shopping",
     title: "Shopping",
     bgColor: COLOR_HOME, //todo change color
     grid: { cols: 3, rows: 1 },
@@ -173,10 +182,10 @@ const defaultPages: PageDef[] = [
     ]
   },
   {
-    id: "i_did",
+    id: "I_Did",
     parentId: "home",
-    slug: "/p/i_did",
-    title: "I Did ...",
+    slug: "/p/I_Did",
+    title: "I Did",
     bgColor: COLOR_HOME, //todo change color
     grid: { cols: 2, rows: 2 },
     buttons: [
