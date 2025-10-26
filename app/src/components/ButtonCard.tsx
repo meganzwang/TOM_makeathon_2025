@@ -35,17 +35,17 @@ export default function ButtonCard({ btn, pageBg }: Props) {
   return (
     <button
       onClick={handleClick}
-      className={`m-1 w-full h-full !rounded-xl shadow-xl flex flex-col items-center justify-start overflow-hidden 
-        focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-400 
-        hover:scale-[1.05] hover:shadow-2xl hover:border-purple-600
-        active:scale-[0.95] active:shadow-lg active:border-purple-700
-        transition-all duration-200 ease-out
-        relative cursor-pointer select-none
-        touch-manipulation`}
+      className={`m-1 w-full h-full !rounded-xl shadow-xl flex flex-col items-center justify-start overflow-hidden
+        focus:outline-none focus-visible:ring-4 focus-visible:ring-purple-400
+         hover:scale-[1.05] hover:shadow-2xl hover:border-purple-600
+         active:scale-[0.95] active:shadow-lg active:border-purple-700
+         transition-all duration-200 ease-out
+         relative cursor-pointer select-none
+         touch-manipulation`}
       style={{ 
-        backgroundColor: "#FFFFFF", 
+        backgroundColor: "#FFFFFF",
         border: "3px solid #9146FF",
-        willChange: "transform, box-shadow, border-color"
+        borderRadius: "1rem"
       }}
     >
       {btn.type === "link" && (
