@@ -62,7 +62,7 @@ function Grid({ page }: { page: any }) {
           className="m-2 p-6 w-full h-full"
           style={{ gridColumn: `span ${b.colSpan ?? 1}` }}
         >
-          <ButtonCard btn={b} pageBg={page.bgColor} radius="full" />
+          <ButtonCard btn={b} pageBg={page.bgColor} />
         </div>
       ))}
     </div>

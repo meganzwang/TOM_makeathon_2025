@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 type Props = {
@@ -18,12 +17,13 @@ export default function TopBar({ title, onOpenSettings }: Props) {
     <div className="w-full px-8 py-3">
       <div className="flex items-start justify-between">
         <button
-          className="text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all shadow-lg border border-white/20"
+          className="text-white bg-white/10 hover:bg-white/25 hover:scale-105 hover:shadow-xl backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all duration-200 ease-out shadow-lg border border-white/20 active:scale-95 active:bg-white/30 cursor-pointer select-none touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
           onClick={goBack}
           aria-label="Back"
           style={{
             fontSize: "18px",
-            fontFamily: "Outfit, sans-serif"
+            fontFamily: "Outfit, sans-serif",
+            willChange: "transform, background-color, box-shadow"
           }}
         >
           ← Back
@@ -38,12 +38,13 @@ export default function TopBar({ title, onOpenSettings }: Props) {
           {title}
         </div>
         <button
-          className="text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all shadow-lg border border-white/20"
+          className="text-white bg-white/10 hover:bg-white/25 hover:scale-105 hover:shadow-xl backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all duration-200 ease-out shadow-lg border border-white/20 active:scale-95 active:bg-white/30 cursor-pointer select-none touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
           onClick={onOpenSettings}
           aria-label="Settings"
           style={{
             fontSize: "18px",
-            fontFamily: "Outfit, sans-serif"
+            fontFamily: "Outfit, sans-serif",
+            willChange: "transform, background-color, box-shadow"
           }}
         >
           ⚙ Settings
