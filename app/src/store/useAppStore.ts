@@ -4,7 +4,7 @@ import type { PageDef, ButtonItem } from "../types";
 
 // Default colors and pages
 const COLOR_HOME = "#C3B1E1";
-const COLOR_HUNGRY = "#F3E8FF";     // customizable in settings
+const COLOR_DEFAULT = "#F3E8FF";     // customizable in settings
 const COLOR_ACTIVITIES = "#E0F2FE"; // customizable in settings
 const COLOR_PLACES = "#C3B1E1";
 const COLOR_CHAT = "#C3B1E1";
@@ -14,7 +14,7 @@ const defaultPages: PageDef[] = [
     id: "home",
     slug: "/",
     title: "Chizenum's Board",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 3, rows: 3 },
     buttons: [
       { id: "b_home_hungry", type: "link", label: "Hungry", linkPageId: "hungry" },
@@ -32,7 +32,7 @@ const defaultPages: PageDef[] = [
     id: "greetings",
     slug :"/p/greetings",
     title:"Greetings",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: {cols:2, rows:1},
     buttons:[
       {id:"greetings_hi", type:"audio", label:"Hi"},
@@ -43,7 +43,7 @@ const defaultPages: PageDef[] = [
     id: "hungry",
     slug: "/p/hungry",
     title: "Hungry",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 2, rows: 3 },
     buttons: [
       { id: "b_h_rest", type: "link", label: "Restaurant", linkPageId: "restaurants", colSpan: 2 },
@@ -58,7 +58,7 @@ const defaultPages: PageDef[] = [
     parentId: "hungry",
     slug: "/p/restaurants",
     title: "Restaurants",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 4, rows: 3 },
     buttons: [
       { id: "r_zaxbys", type: "audio", label: "Zaxby's" },
@@ -80,7 +80,7 @@ const defaultPages: PageDef[] = [
     parentId: "hungry",
     slug: "/p/drink",
     title: "Drink",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 3, rows: 1 },
     buttons: [
       { id: "d_water", type: "audio", label: "Water" },
@@ -93,7 +93,7 @@ const defaultPages: PageDef[] = [
     parentId: "hungry",
     slug: "/p/meal",
     title: "Meal",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 3, rows: 1 },
     buttons: [{ id: "meal_tbd", type: "audio", label: "TBD" }]
   },
@@ -102,7 +102,7 @@ const defaultPages: PageDef[] = [
     parentId: "hungry",
     slug: "/p/snack",
     title: "Snack",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 3, rows: 1 },
     buttons: [{ id: "snack_tbd", type: "audio", label: "TBD" }]
   },
@@ -111,7 +111,7 @@ const defaultPages: PageDef[] = [
     parentId: "hungry",
     slug: "/p/Dessert",
     title: "Dessert",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 3, rows: 1 },
     buttons: [{ id: "Dessert_tbd", type: "audio", label: "TBD" }]
   },
@@ -119,7 +119,7 @@ const defaultPages: PageDef[] = [
     id: "activities",
     slug: "/p/activities",
     title: "Activities",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "a_art", type: "link", label: "Art", linkPageId: "art" },
@@ -137,7 +137,7 @@ const defaultPages: PageDef[] = [
     parentId: "activities",
     slug: "/p/art",
     title: "Art",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 3, rows: 1 },
     buttons: [
       { id: "art_draw", type: "audio", label: "Draw" },
@@ -150,7 +150,7 @@ const defaultPages: PageDef[] = [
     parentId: "activities",
     slug: "/p/tv",
     title: "TV",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "tv_nursery", type: "audio", label: "Nursery Rhymes" },
@@ -168,7 +168,7 @@ const defaultPages: PageDef[] = [
     parentId: "home",
     slug: "/p/places",
     title: "Places",
-    bgColor: COLOR_HUNGRY, //todo change color
+    bgColor: COLOR_DEFAULT, //todo change color
     grid: { cols: 3, rows: 3 },
     buttons: [
       { id: "places_resturants", type: "link", label: "Restaurants", linkPageId: "restaurants" },
@@ -187,7 +187,7 @@ const defaultPages: PageDef[] = [
     parentId: "places",
     slug: "/p/Shopping",
     title: "Shopping",
-    bgColor: COLOR_HUNGRY, //todo change color
+    bgColor: COLOR_DEFAULT, //todo change color
     grid: { cols: 3, rows: 1 },
     buttons: [
       { id: "places_mall", type: "audio", label: "Mall" },
@@ -200,7 +200,7 @@ const defaultPages: PageDef[] = [
     parentId: "home",
     slug: "/p/I_Did",
     title: "I Did",
-    bgColor: COLOR_HUNGRY, //todo change color
+    bgColor: COLOR_DEFAULT, //todo change color
     grid: { cols: 2, rows: 2 },
     buttons: [
       { id: "i_did_i_felt", type: "link", label: "I Felt ...", linkPageId: "feelings" },
@@ -214,7 +214,7 @@ const defaultPages: PageDef[] = [
     parentId: "home",
     slug: "/p/i_need",
     title: "I Need ...",
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 2, rows: 2 },
     buttons: [
       { id: "i_need_bathroom", type: "audio", label: "Bathroom" },
@@ -228,7 +228,7 @@ const defaultPages: PageDef[] = [
     parentId: "home",
     slug: "/p/feelings",
     title: "Feelings" ,
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "feelings_sick", type: "link", label: "Sick", linkPageId :"sick" },
@@ -246,7 +246,7 @@ const defaultPages: PageDef[] = [
     parentId: "feelings",
     slug: "/p/sick",
     title: "Sick" ,
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 2, rows: 2 },
     buttons: [
       { id: "feelings_sore_throat", type: "audio", label: "Sore Throat" },
@@ -260,7 +260,7 @@ const defaultPages: PageDef[] = [
     parentId: "feelings",
     slug: "/p/hurt",
     title: "Hurt" ,
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 2, rows: 2 },
     buttons: [
       { id: "feelings_head", type: "audio", label: "Head" },
@@ -274,7 +274,7 @@ const defaultPages: PageDef[] = [
     parentId: "home",
     slug: "/p/chat",
     title: "Chat" ,
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "chat_maybe", type: "audio", label: "Maybe" },
@@ -292,7 +292,7 @@ const defaultPages: PageDef[] = [
     parentId: "home",
     slug: "/p/people",
     title: "People" ,
-    bgColor: COLOR_HUNGRY,
+    bgColor: COLOR_DEFAULT,
     grid: { cols: 4, rows: 2 },
     buttons: [
       { id: "people_mom", type: "audio", label: "Mom" },
