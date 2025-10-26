@@ -116,7 +116,7 @@ import ArmsImg from "../assets/arm.jpg";
 import SoreThroatImg from "../assets/sore_throat.png";
 import CrampsImg from "../assets/cramps.png";
 import HeadacheImg from "../assets/head_ache.png";
-import StomachacheImg from "../assets/stomach_ache.png";
+import StomachacheImg from "../assets/stomach_ache.jpg";
 
 //People
 import MomImg from "../assets/mom.png";
@@ -127,6 +127,10 @@ import CatImg from "../assets/cat.png";
 import HeImg from "../assets/he.png";
 import HerImg from "../assets/she.png";
 import ChizenumImg from "../assets/chizenum.png";
+
+//Greetings
+import HiImg from "../assets/Hi.png";
+import ByeImg from "../assets/bye.png";
 
 
 export const staticImageMap: Record<string, string> = {
@@ -266,6 +270,9 @@ export const staticImageMap: Record<string, string> = {
   "Her" : HerImg,
   "Chizenum" : ChizenumImg,
 
-
+  //Greetings
+  "Hi" : HiImg,
+  "Bye" : ByeImg,
+  
 };
 
