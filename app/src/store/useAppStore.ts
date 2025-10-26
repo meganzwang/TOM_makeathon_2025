@@ -284,7 +284,7 @@ const defaultPages: PageDef[] = [
     buttons: [
       { id: "people_mom", type: "audio", label: "Mom" },
       { id: "people_doctor", type: "audio", label: "Doctor" },
-      { id: "people_teacher", type: "audio", label: "Teaher" },
+      { id: "people_teacher", type: "audio", label: "Teacher" },
       { id: "people_dog", type: "audio", label: "Dog" },
       { id: "people_cat", type: "audio", label: "Cat" },
       { id: "people_he", type: "audio", label: "He" },

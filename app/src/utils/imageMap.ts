@@ -92,11 +92,21 @@ import PleaseImg from "../assets/please.png";
 import SickImg from "../assets/sick.jpg";
 import HotImg from "../assets/hot.png";
 import ColdImg from "../assets/cold.jpg";
-import HappyImg from "../assets/happy.png";
-import HurtImg from "../assets/Hurt.png";
-import AngryImg from "../assets/mad.png";
+import HappyImg from "../assets/happy!.png";
+import HurtImg from "../assets/hurt!.png";
+import AngryImg from "../assets/angry!.png";
 import BoredImg from "../assets/bored.jpg";
 import SadImg from "../assets/sad.jpg";
+
+//People
+import MomImg from "../assets/mom.png";
+import DoctorImg from "../assets/doctor.png";
+import TeacherImg from "../assets/teacher.png";
+import DogImg from "../assets/dog.png";
+import CatImg from "../assets/cat.png";
+import HeImg from "../assets/he.png";
+import HerImg from "../assets/she.png";
+import ChizenumImg from "../assets/chizenum.png";
 
 
 export const staticImageMap: Record<string, string> = {
@@ -203,6 +213,17 @@ export const staticImageMap: Record<string, string> = {
   "I Felt ..." : FeelingsImg,
   "I Ate ..." : HungryImg,
   "I went to ..." : PlacesImg,
-  "I talked to ..." : PeopleImg
+  "I talked to ..." : PeopleImg,
+
+  // People
+  "Mom": MomImg,
+  "Doctor": DoctorImg,
+  "Teacher": TeacherImg,
+  "Dog" : DogImg,
+  "Cat" : CatImg,
+  "He" : HeImg,
+  "Her" : HerImg,
+  "Chizenum" : ChizenumImg,
+
 
 };
