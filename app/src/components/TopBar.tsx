@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 type Props = {
@@ -15,10 +14,10 @@ export default function TopBar({ title, onOpenSettings }: Props) {
   };
 
   return (
-    <div className="w-full px-8 py-3">
-      <div className="flex items-start justify-between">
+    <div className="w-full px-8 py-4 backdrop-blur-sm">
+      <div className="flex items-center justify-between">
         <button
-          className="text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all shadow-lg border border-white/20"
+          className="text-white bg-white/15 hover:bg-white/25 backdrop-blur-md rounded-2xl px-6 py-3 font-bold transition-all duration-300 shadow-xl border border-white/30 hover:border-white/50 hover:scale-105 active:scale-95 hover:shadow-2xl"
           onClick={goBack}
           aria-label="Back"
           style={{
@@ -29,16 +28,17 @@ export default function TopBar({ title, onOpenSettings }: Props) {
           ← Back
         </button>
         <div
-          className="text-white font-bold tracking-tight"
+          className="text-white font-extrabold tracking-tight drop-shadow-lg"
           style={{
-            fontSize: "28px",
-            fontFamily: "Outfit, sans-serif"
+            fontSize: "32px",
+            fontFamily: "Outfit, sans-serif",
+            textShadow: "0 2px 10px rgba(0,0,0,0.2)"
           }}
         >
           {title}
         </div>
         <button
-          className="text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all shadow-lg border border-white/20"
+          className="text-white bg-white/15 hover:bg-white/25 backdrop-blur-md rounded-2xl px-6 py-3 font-bold transition-all duration-300 shadow-xl border border-white/30 hover:border-white/50 hover:scale-105 active:scale-95 hover:shadow-2xl"
           onClick={onOpenSettings}
           aria-label="Settings"
           style={{

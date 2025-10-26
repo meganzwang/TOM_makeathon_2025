@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
   onYes?: () => void;
   onHelp?: () => void;
@@ -14,8 +12,8 @@ function speak(text: string) {
 
 export default function BottomBar({ onYes, onHelp, onNo }: Props) {
   return (
-    <div className="bg-transparent pb-[var(--safe-bottom)] flex justify-center">
-      <div className="flex items-center justify-center gap-48 py-3 px-8">
+    <div className="bg-transparent pb-[var(--safe-bottom)] flex justify-center backdrop-blur-sm">
+      <div className="flex items-center justify-center gap-8 py-4 px-8">
         <LowButton
         label="Yes"
         color="green"
@@ -48,20 +46,23 @@ function LowButton({ label, onClick, color }: { label: string; onClick: () => vo
     onClick={onClick}
     className="
     text-white
-    rounded-2xl
-    font-bold
-    hover:opacity-90 hover:scale-105 active:scale-95
-    transition-all shadow-2xl
-    border-2 border-white/20
+    rounded-3xl
+    font-extrabold
+    hover:opacity-90 hover:scale-110 active:scale-95
+    transition-all duration-300 shadow-2xl
+    border-4 border-white/30
+    hover:border-white/50
+    hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]
     "
       style={{
-        minWidth: "150px",
-        minHeight: "60px",
+        minWidth: "180px",
+        minHeight: "75px",
         backgroundColor: bgColor,
         color: "#ffffff",
-        fontSize: "32px",
-        lineHeight: "32px",
-        padding: "0 40px"
+        fontSize: "36px",
+        lineHeight: "36px",
+        padding: "0 48px",
+        fontFamily: "Outfit, sans-serif"
       }}
     >
       {label}
