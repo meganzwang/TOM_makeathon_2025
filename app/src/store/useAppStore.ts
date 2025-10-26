@@ -24,6 +24,18 @@ const defaultPages: PageDef[] = [
       { id: "b_home_i_did", type: "link", label: "I Did", linkPageId: "I_Did" },
       { id: "b_home_people", type: "link", label: "People" , linkPageId:"people"},
       { id: "b_home_questions", type: "audio", label: "Question" },
+      { id: "b_home_greetings", type: "link", label: "Greetings", linkPageId:"greetings" },
+    ]
+  },
+  {
+    id: "greetings",
+    slug :"/p/greetings",
+    title:"Greetings",
+    bgColor: COLOR_HOME,
+    grid: {cols:2, rows:1},
+    buttons:[
+      {id:"greetings_hi", type:"audio", label:"Hi"},
+      {id:"greetings_bye", type:"audio", label:"Bye"}
     ]
   },
   {
