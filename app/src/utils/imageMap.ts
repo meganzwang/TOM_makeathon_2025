@@ -60,7 +60,7 @@ import PaintingImg from "../assets/paint_new.png";
 import NurseryRhymesImg from "../assets/nursery_rhymes.png";
 import LoraxImg from "../assets/lorax.png";
 import CliffordImg from "../assets/clifford_new.png";
-import NetflixImg from "../assets/netflix.png";
+import NetflixImg from "../assets/netflix.jpg";
 import WordGirl from "../assets/word_girl.png";
 import CatInTheHatImg from "../assets/cat_in_the_hat.png";
 import PBSImg from "../assets/pbs_kids.png";
