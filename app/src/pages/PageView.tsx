@@ -17,15 +17,9 @@ export default function PageView() {
   const bgColor = page.parentId ? (getPageById(page.parentId)?.bgColor ?? page.bgColor) : page.bgColor;
 
   return (
-    <div className="min-h-screen w-full" style={{ backgroundColor: bgColor }}>
+    <div className="h-screen w-full flex flex-col overflow-hidden" style={{ backgroundColor: bgColor }}>
       <TopBar title={page.title} onOpenSettings={() => setSettingsOpen(true)} />
-      <div
-        className="mx-auto max-w-6xl px-4 pb-20"
-        style={{
-          height: "calc(100vh - 64px - 64px - 80px)",
-          // topbar ~ 48px + padding, bottom bar ~ 64px
-        }}
-      >
+      <div className="mx-auto w-full max-w-7xl px-8 flex-1 flex items-center justify-center overflow-auto">
         <Grid page={page} />
       </div>
       <BottomBar />
@@ -44,10 +38,11 @@ function Grid({ page }: { page: any }) {
 
   return (
     <div
-      className="grid gap-3 h-full place-content-start mt-200"
+      className="grid gap-4 w-full h-full"
       style={{
         gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
-        gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`
+        gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`,
+        maxHeight: "100%"
       }}
     >
       {page.buttons.map((b: any) => (

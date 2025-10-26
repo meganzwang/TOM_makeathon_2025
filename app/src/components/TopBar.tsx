@@ -15,32 +15,40 @@ export default function TopBar({ title, onOpenSettings }: Props) {
   };
 
   return (
-    <div 
-    className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-1 bg-black/10 backdrop-blur-sm"
-    style={{
-      height: "calc(12px + env(safe-area-inset-top))",
-      paddingTop: "env(safe-area-inset-top)",
-    }}
-    >
-      <button
-        className="text-sm text-white/90 bg-black/30 hover:bg-black/40 rounded-full px-3 py-1"
-        onClick={goBack}
-        aria-label="Back"
-      >
-        ← Back
-      </button>
-
-      <div className="text-white font-poppins font-bold text-base text-center flex-1">
-        {title}
+    <div className="w-full px-8 py-3">
+      <div className="flex items-start justify-between">
+        <button
+          className="text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all shadow-lg border border-white/20"
+          onClick={goBack}
+          aria-label="Back"
+          style={{
+            fontSize: "18px",
+            fontFamily: "Outfit, sans-serif"
+          }}
+        >
+          ← Back
+        </button>
+        <div
+          className="text-white font-bold tracking-tight"
+          style={{
+            fontSize: "28px",
+            fontFamily: "Outfit, sans-serif"
+          }}
+        >
+          {title}
+        </div>
+        <button
+          className="text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl px-5 py-2.5 font-bold transition-all shadow-lg border border-white/20"
+          onClick={onOpenSettings}
+          aria-label="Settings"
+          style={{
+            fontSize: "18px",
+            fontFamily: "Outfit, sans-serif"
+          }}
+        >
+          ⚙ Settings
+        </button>
       </div>
-
-      <button
-        className="text-sm text-white/90 bg-black/30 hover:bg-black/40 rounded-full px-3 py-1"
-        onClick={onOpenSettings}
-        aria-label="Settings"
-      >
-        ⚙ Settings
-      </button>
     </div>
   );
 }
