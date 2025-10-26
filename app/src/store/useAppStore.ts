@@ -48,7 +48,7 @@ const defaultPages: PageDef[] = [
       { id: "b_h_meal", type: "audio", label: "Meal", linkPageId: "meal" }, //changed from link as
       { id: "b_h_snack", type: "audio", label: "Snack", linkPageId: "snack" }, //dont know what to put on page
       { id: "b_h_drink", type: "link", label: "Drink", linkPageId: "drink" },
-      { id: "b_h_dessert", type: "link", label: "Dessert", linkPageId: "Dessert" }
+      { id: "b_h_dessert", type: "audio", label: "Dessert"}
     ]
   },
   {
