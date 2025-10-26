@@ -1,5 +1,5 @@
 // Static image mappings for button labels
-import HungryImg from "../assets/hungry!.png";
+import HungryImg from "../assets/hungry_new.png";
 import ActivitiesImg from "../assets/Activities.png";
 import PlacesImg from "../assets/place.png";
 import ChatImg from "../assets/Chat.png";
@@ -25,7 +25,7 @@ import WendysImg from "../assets/wendys.png";
 import OliveGardenImg from "../assets/Olive_garden.png";
 import CheesecakeImg from "../assets/cheesecakefactory.png";
 import ThidaThaiImg from "../assets/Thida_Thai.png";
-import TazikiImg from "../assets/taziki!.png";
+import TazikiImg from "../assets/taziki_new.png";
 import PandaImg from "../assets/panda_express.png";
 import ThaiPapayaImg from "../assets/thai_papaya.png";
 import FatMOsImg from "../assets/fat_MO.png";
@@ -46,7 +46,7 @@ import ArtImg from "../assets/art.png";
 import YogaImg from "../assets/yoga.png";
 import DanceImg from "../assets/dance.png";
 import MusicImg from "../assets/music.png";
-import TVImg from "../assets/tv!.png";
+import TVImg from "../assets/tv_new.png";
 import WalkImg from "../assets/walk.png";
 import PotteryImg from "../assets/pottery.png";
 import SwimmingImg from "../assets/swimming.png";
@@ -54,7 +54,7 @@ import SwimmingImg from "../assets/swimming.png";
 // Art sub-items
 import DrawingImg from "../assets/drawing.png";
 import ColorImg from "../assets/color.png";
-import PaintingImg from "../assets/paint!.png";
+import PaintingImg from "../assets/paint_new.png";
 
 // TV shows
 import NurseryRhymesImg from "../assets/nursery_rhymes.png";
@@ -73,7 +73,7 @@ import BathroomImg from "../assets/bathroom.png";
 import HomeImg from "../assets/Home.png";
 import ChurchImg from "../assets/church.png";
 import BowlingImg from"../assets/bowling.png";
-import ParkImg from "../assets/park!.png";
+import ParkImg from "../assets/park_new.png";
 import DaveAndBustersImg from "../assets/dave_busters.png";
 
 //Shopping 
@@ -84,25 +84,25 @@ import DollarGeneralImg from "../assets/dollar_general.png";
 //Chat
 import MaybeImg from "../assets/maybe.png";
 import DoneImg from "../assets/done.png";
-import LaterImg from "../assets/later!.png";
+import LaterImg from "../assets/later_new.png";
 import MoreImg from "../assets/more.png";
 import IDKImg from "../assets/idk.png";
-import StopImg from "../assets/stop!.png";
+import StopImg from "../assets/stop_new.png";
 import ThankyouImg from "../assets/thank_you.png";
 import PleaseImg from "../assets/please.png";
 
 //Needs
 import HelpImg from "../assets/help!.jpg";
-import SleepImg from "../assets/Sleep!.png";
+import SleepImg from "../assets/Sleep_new.png";
 import MedicineImg from "../assets/Medicine.png";
 
 //Feelings
 import SickImg from "../assets/sick.jpg";
 import HotImg from "../assets/hot.png";
 import ColdImg from "../assets/cold.jpg";
-import HappyImg from "../assets/happy!.png";
-import HurtImg from "../assets/hurt!.png";
-import AngryImg from "../assets/angry!.png";
+import HappyImg from "../assets/happy_new.png";
+import HurtImg from "../assets/hurt_new.png";
+import AngryImg from "../assets/angry_new.png";
 import BoredImg from "../assets/bored.jpg";
 import SadImg from "../assets/sad.jpg";
 
@@ -110,7 +110,7 @@ import SadImg from "../assets/sad.jpg";
 import HeadImg from "../assets/Head.png";
 import StomachImg from "../assets/stomach.png";
 import LegsImg from "../assets/legs.jpg";
-import ArmsImg from "../assets/arm!.png";
+import ArmsImg from "../assets/arm_new.png";
 
 // Sick sub-items
 import SoreThroatImg from "../assets/sore_throat.png";
