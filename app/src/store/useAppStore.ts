@@ -47,18 +47,18 @@ const defaultPages: PageDef[] = [
     bgColor: COLOR_HUNGRY,
     grid: { cols: 4, rows: 3 },
     buttons: [
-      { id: "r_zaxbys", type: "audio", label: "Zaxby’s" },
+      { id: "r_zaxbys", type: "audio", label: "Zaxby's" },
       { id: "r_ihop", type: "audio", label: "iHOP" },
       { id: "r_kroger", type: "audio", label: "Kroger" },
       { id: "r_applebees", type: "audio", label: "Applebees" },
-      { id: "r_wendys", type: "audio", label: "Wendy’s" },
+      { id: "r_wendys", type: "audio", label: "Wendy's" },
       { id: "r_olive_garden", type: "audio", label: "Olive Garden" },
       { id: "r_cheesecake", type: "audio", label: "Cheescake Factory" },
       { id: "r_thida_thai", type: "audio", label: "Thida Thai" },
       { id: "r_taziki", type: "audio", label: "Taziki" },
       { id: "r_panda", type: "audio", label: "Panda Express" },
       { id: "r_thai_papaya", type: "audio", label: "Thai Papaya" },
-      { id: "r_fat_mos", type: "audio", label: "Fat MO’s" }
+      { id: "r_fat_mos", type: "audio", label: "Fat MO's" }
     ]
   },
   {
