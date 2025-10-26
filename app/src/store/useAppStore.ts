@@ -23,7 +23,7 @@ const defaultPages: PageDef[] = [
       { id: "b_home_feelings", type: "link", label: "Feelings", linkPageId: "feelings" },
       { id: "b_home_i_did", type: "link", label: "I Did", linkPageId: "I_Did" },
       { id: "b_home_people", type: "link", label: "People" , linkPageId:"people"},
-      { id: "b_home_questions", type: "audio", label: "Questions" },
+      { id: "b_home_questions", type: "audio", label: "Question" },
     ]
   },
   {

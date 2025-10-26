@@ -25,7 +25,7 @@ import WendysImg from "../assets/wendys.png";
 import OliveGardenImg from "../assets/Olive_garden.png";
 import CheesecakeImg from "../assets/cheesecakefactory.png";
 import ThidaThaiImg from "../assets/Thida_Thai.png";
-import TazikiImg from "../assets/tzaskik's.png";
+import TazikiImg from "../assets/taziki!.png";
 import PandaImg from "../assets/panda_express.png";
 import ThaiPapayaImg from "../assets/thai_papaya.png";
 import FatMOsImg from "../assets/fat_MO.png";
@@ -43,7 +43,7 @@ import ArtImg from "../assets/art.png";
 import YogaImg from "../assets/yoga.png";
 import DanceImg from "../assets/dance.png";
 import MusicImg from "../assets/music.png";
-import TVImg from "../assets/tv.png";
+import TVImg from "../assets/tv!.png";
 import WalkImg from "../assets/walk.png";
 import PotteryImg from "../assets/pottery.png";
 import SwimmingImg from "../assets/swimming.png";
@@ -51,7 +51,7 @@ import SwimmingImg from "../assets/swimming.png";
 // Art sub-items
 import DrawingImg from "../assets/drawing.png";
 import ColorImg from "../assets/color.png";
-import PaintingImg from "../assets/painting.png";
+import PaintingImg from "../assets/paint!.png";
 
 // TV shows
 import NurseryRhymesImg from "../assets/nursery_rhymes.png";
@@ -70,7 +70,7 @@ import BathroomImg from "../assets/bathroom.png";
 import HomeImg from "../assets/Home.png";
 import ChurchImg from "../assets/church.png";
 import BowlingImg from"../assets/bowling.png";
-import ParkImg from "../assets/park.png";
+import ParkImg from "../assets/park!.png";
 import DaveAndBustersImg from "../assets/dave_busters.png";
 
 //Shopping 
@@ -81,16 +81,16 @@ import DollarGeneralImg from "../assets/dollar_general.png";
 //Chat
 import MaybeImg from "../assets/maybe.png";
 import DoneImg from "../assets/done.png";
-import LaterImg from "../assets/later.png";
+import LaterImg from "../assets/later!.png";
 import MoreImg from "../assets/more.png";
 import IDKImg from "../assets/idk.png";
-import StopImg from "../assets/stop.png";
+import StopImg from "../assets/stop!.png";
 import ThankyouImg from "../assets/thank_you.png";
 import PleaseImg from "../assets/please.png";
 
 //Needs
 import HelpImg from "../assets/help!.jpg";
-import SleepImg from "../assets/Sleep.png";
+import SleepImg from "../assets/sleep!.png";
 import MedicineImg from "../assets/Medicine.png";
 
 //Feelings
@@ -107,7 +107,7 @@ import SadImg from "../assets/sad.jpg";
 import HeadImg from "../assets/Head.png";
 import StomachImg from "../assets/stomach.png";
 import LegsImg from "../assets/legs.jpg";
-import ArmsImg from "../assets/arm.jpg";
+import ArmsImg from "../assets/arm!.png";
 
 //People
 import MomImg from "../assets/mom.png";
@@ -130,7 +130,7 @@ export const staticImageMap: Record<string, string> = {
   "Feelings": FeelingsImg,
   "I Did" : IdidImg, 
   "People": PeopleImg,
-  "Questions": QuestionImg,
+  "Question": QuestionImg,
   "Yoga": YogaImg,
 
   // Food
