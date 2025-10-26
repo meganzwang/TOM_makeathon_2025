@@ -1,4 +1,7 @@
 {
+  "name": "tom-makeathon-2025",
+  "version": "1.0.0",
+  "homepage": "https://meganzwang.github.io/TOM_makeathon_2025",
   "dependencies": {
     "@vitejs/plugin-react": "^5.1.0",
     "dexie": "^4.0.4",
@@ -13,6 +16,7 @@
     "@types/react": "^18.3.7",
     "@types/react-dom": "^18.3.2",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.18",
     "typescript": "^5.6.2",
@@ -22,6 +26,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }

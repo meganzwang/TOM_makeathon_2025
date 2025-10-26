@@ -1,12 +1,12 @@
 // Static image mappings for button labels
 import HungryImg from "../assets/hungry_new.png";
-import ActivitiesImg from "../assets/Activities.png";
+import ActivitiesImg from "../assets/activities.png";
 import PlacesImg from "../assets/place.png";
-import ChatImg from "../assets/Chat.png";
-import NeedsImg from "../assets/I_need.png";
-import FeelingsImg from "../assets/Feelings.png";
-import IdidImg from "../assets/IDID.png";
-import PeopleImg from "../assets/People.png";
+import ChatImg from "../assets/chat.png";
+import NeedsImg from "../assets/i_need.png";
+import FeelingsImg from "../assets/feelings.png";
+import IdidImg from "../assets/i_did_main.png";
+import PeopleImg from "../assets/people.png";
 import GreetingsImg from "../assets/greetings.png";
 
 //Hungry sub-items
@@ -18,17 +18,17 @@ import DessertImg from "../assets/dessert.png";
 
 // Restaurants sub-items
 import ZaxbysImg from "../assets/zaxbys.png";
-import IHOPImg from "../assets/IHOP.png";
+import IHOPImg from "../assets/ihop.png";
 import KrogerImg from "../assets/kroger.png";
-import ApplebeesImg from "../assets/apple_bee's.png";
+import ApplebeesImg from "../assets/apple_bees.png";
 import WendysImg from "../assets/wendys.png";
-import OliveGardenImg from "../assets/Olive_garden.png";
+import OliveGardenImg from "../assets/olive_garden.png";
 import CheesecakeImg from "../assets/cheesecakefactory.png";
-import ThidaThaiImg from "../assets/Thida_Thai.png";
+import ThidaThaiImg from "../assets/thida_thai.png";
 import TazikiImg from "../assets/taziki_new.png";
 import PandaImg from "../assets/panda_express.png";
 import ThaiPapayaImg from "../assets/thai_papaya.png";
-import FatMOsImg from "../assets/fat_MO.png";
+import FatMOsImg from "../assets/fat_mo.png";
 
 //Meal
 
@@ -59,18 +59,18 @@ import PaintingImg from "../assets/paint_new.png";
 // TV shows
 import NurseryRhymesImg from "../assets/nursery_rhymes.png";
 import LoraxImg from "../assets/lorax.png";
-import CliffordImg from "../assets/Clifford.png";
-import NetflixImg from "../assets/Netflix.png";
-import WordGirl from "../assets/wordGirl.png";
+import CliffordImg from "../assets/clifford_new.png";
+import NetflixImg from "../assets/netflix.png";
+import WordGirl from "../assets/word_girl.png";
 import CatInTheHatImg from "../assets/cat_in_the_hat.png";
 import PBSImg from "../assets/pbs_kids.png";
 import CookingShowImg from "../assets/cooking_show.png";
 
-//Places 
-import ShoppingImg from "../assets/shopping bag.jpg";
+//Places
+import ShoppingImg from "../assets/shopping_bag.jpg";
 import MoviesImg from "../assets/movie_theater.png";
 import BathroomImg from "../assets/bathroom.png";
-import HomeImg from "../assets/Home.png";
+import HomeImg from "../assets/home.png";
 import ChurchImg from "../assets/church.png";
 import BowlingImg from"../assets/bowling.png";
 import ParkImg from "../assets/park_new.png";
@@ -94,7 +94,7 @@ import PleaseImg from "../assets/please.png";
 //Needs
 import HelpImg from "../assets/help_new.jpg";
 import SleepImg from "../assets/sleep_new.png";
-import MedicineImg from "../assets/Medicine.png";
+import MedicineImg from "../assets/medicine.png";
 
 //Feelings
 import SickImg from "../assets/sick.jpg";
@@ -107,7 +107,7 @@ import BoredImg from "../assets/bored.jpg";
 import SadImg from "../assets/sad.jpg";
 
 //Hurt
-import HeadImg from "../assets/Head.png";
+import HeadImg from "../assets/head.png";
 import StomachImg from "../assets/stomach.png";
 import LegsImg from "../assets/legs.jpg";
 import ArmsImg from "../assets/arm_new.png";
@@ -129,7 +129,7 @@ import HerImg from "../assets/she.png";
 import ChizenumImg from "../assets/chizenum.png";
 
 //Greetings
-import HiImg from "../assets/Hi.png";
+import HiImg from "../assets/hi.png";
 import ByeImg from "../assets/bye.png";
 
 
