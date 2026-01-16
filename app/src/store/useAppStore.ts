@@ -15,8 +15,9 @@ const defaultPages: PageDef[] = [
     slug: "/",
     title: "Chizenum's Board",
     bgColor: COLOR_DEFAULT,
-    grid: { cols: 3, rows: 3 },
+    grid: { cols: 4, rows: 3 },
     buttons: [
+      { id: "b_home_period", type: "link", label: "Period", linkPageId:"period" },
       { id: "b_home_hungry", type: "link", label: "Hungry", linkPageId: "hungry" },
       { id: "b_home_activities", type: "link", label: "Activities", linkPageId: "activities" },
       { id: "b_home_places", type: "link", label: "Places", linkPageId: "places" },
@@ -26,6 +27,44 @@ const defaultPages: PageDef[] = [
       { id: "b_home_i_did", type: "link", label: "I Did", linkPageId: "I_Did" },
       { id: "b_home_people", type: "link", label: "People" , linkPageId:"people"},
       { id: "b_home_greetings", type: "link", label: "Greetings", linkPageId:"greetings" },
+      { id: "b_home_supplies", type: "link", label: "Supplies", linkPageId:"supplies" }
+    ]
+  },
+  {
+    id: "period",
+    slug :"/p/period",
+    title:"Period",
+    bgColor: COLOR_DEFAULT,
+    grid: {cols:3, rows:3},
+    buttons:[
+      {id:"period_started", type:"audio", label:"Period Started"},
+      {id:"period_coming", type:"audio", label:"Period Coming"},
+      {id:"period_light", type:"audio", label:"Light"},
+      {id:"period_heavy", type:"audio", label:"Heavy"},
+      {id:"period_spotting", type:"audio", label:"Spotting"},
+      {id:"period_check", type:"audio", label:"Check Me"},
+      {id:"period_feels", type:"audio", label:"I Feel Weird"},
+      {id:"period_home", type:"audio", label:"I Want to Go Home"},
+      {id:"period_supplies", type:"link", label:"Supplies", linkPageId:"supplies"},
+      
+    ]
+  },
+  {
+    id: "supplies",
+    slug :"/p/supplies",
+    title:"Supplies",
+    bgColor: COLOR_DEFAULT,
+    grid: {cols:3, rows:3},
+    buttons:[
+      {id:"supplies_pad", type:"audio", label:"Pad"},
+      {id:"supplies_liner", type:"audio", label:"Liner"},
+      {id:"supplies_period_underwear", type:"audio", label:"Period Underwear"},
+      {id:"supplies_extra_underwear", type:"audio", label:"Extra Underwear"},
+      {id:"supplies_extra_pants", type:"audio", label:"Extra Pants"},
+      {id:"supplies_trash", type:"audio", label:"Trash"},
+      {id:"supplies_bag", type:"audio", label:"Bag/Kit"},
+      {id:"supplies_heating_pad", type:"audio", label:"Heating Pad"},
+      {id:"supplies_pain_meds", type:"audio", label:"Pain Medicine"},
     ]
   },
   {
